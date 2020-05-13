@@ -10,7 +10,7 @@
   <Identity
     Name="XServerIoTOnboardTaskProject-uwp"
     Publisher="CN=avrep"
-    Version="1.0.0.0" />
+    Version="10.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="36371db1-c880-4e73-98c3-81ab25974dbf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -52,5 +52,7 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer"/>
+    <Capability Name="privateNetworkClientServer"/>
   </Capabilities>
 </Package>
