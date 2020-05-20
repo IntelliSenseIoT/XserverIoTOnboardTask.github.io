@@ -6,6 +6,7 @@ using System.Net.Http;
 using Windows.ApplicationModel.Background;
 using Service.Common;
 using File.Log;
+using XserverIoTCommon;
 
 namespace XServerIoTOnboardTaskProject
 {
