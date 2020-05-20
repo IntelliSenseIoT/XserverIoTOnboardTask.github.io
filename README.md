@@ -10,3 +10,8 @@
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
+## Before use app, enable loopback in Windows 10 IoT Core::
+
+    checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
+
+
