@@ -1,14 +1,14 @@
-# Models.Com contains the classes of the Xserver.Data service.
+# Models.Data contains the classes of the Xserver.Data service.
 
 ## Interfaces:
 
-    public class IQuantitiesOfSource        //IQuantitiesOfSource object is included all of the quantities of one Source (for REST communication)
-    {
-        public IQuantitiesOfSourceResult Result { get; set; }
-        public Int16 SourceId { get; set; }
-        public string SourceName { get; set; }
-        public List<QuantityItem> Quantities = new List<QuantityItem>();
-    }
+        public class IQuantitiesOfSource        //IQuantitiesOfSource object is included all of the quantities of one Source (for REST communication)
+        {
+            public IQuantitiesOfSourceResult Result { get; set; }
+            public Int16 SourceId { get; set; }
+            public string SourceName { get; set; }
+            public List<QuantityItem> Quantities = new List<QuantityItem>();
+        }
 
         public class ISource                    //Define Source by Id and Name (for REST communication)
         {
