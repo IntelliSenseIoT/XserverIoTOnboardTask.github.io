@@ -12,7 +12,7 @@ namespace XServerIoTOnboardTaskProject
     {
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-          
+          //XXXX
         }
     }
 }
