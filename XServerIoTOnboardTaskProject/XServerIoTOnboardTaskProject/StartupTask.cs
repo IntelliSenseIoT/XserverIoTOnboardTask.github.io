@@ -4,15 +4,69 @@ using System.Linq;
 using System.Text;
 using System.Net.Http;
 using Windows.ApplicationModel.Background;
-
+using Service.Common;
+using File.Log;
 
 namespace XServerIoTOnboardTaskProject
 {
+    /// <summary>
+    /// Use the code below to easily write a Windows IoT Core OnboardTask to Xserver.IoT framework.
+    /// Created by IntelliSense Ltd.
+    /// Website: http://www.intellisense-iot.com/
+    /// </summary>
+
     public sealed class StartupTask : IBackgroundTask
     {
+        #region XServerIoTOnboardTask service settings
+        //Service display name
+        private const string ServiceDisplayName = "Xserver.OnboardTask";
+        //Task Handler Period (ms)
+        private const int TaskHandlerPeriod = 500;
+        #endregion
+
+        #region Helpers
+        //Log service events and errors
+        ServiceLog ServiceLogging = new ServiceLog();
+        TaskHandler OnboardTaskHandler = new TaskHandler();
+        #endregion
+
+        private static BackgroundTaskDeferral _Deferral = null;
+
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-          //XXXX
+            _Deferral = taskInstance.GetDeferral();
+
+            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+
+            //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
+            //More details about loopback enable: https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io
+
+            //Todo: Write your initial code here
+
+            //Initialize and Start IoT OnboardTask
+            OnboardTaskHandler.WaitingTime = TaskHandlerPeriod;
+            OnboardTaskHandler.ThresholdReached += OnboardTask;
+            OnboardTaskHandler.Run();
+
+            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+        }
+
+        /// <summary>
+        /// IoT Onboard Task
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void OnboardTask(object sender, EventArgs e)
+        {
+            try
+            {
+                //Todo: Type your onboard task code here
+            }
+            catch (Exception ex)
+            {
+                ServiceLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+            }
+            OnboardTaskHandler.Run();  //Task continues to run
         }
     }
 }
