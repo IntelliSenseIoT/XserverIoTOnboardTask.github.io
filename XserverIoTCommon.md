@@ -100,7 +100,5 @@
 
     private async void Button_Click_9(object sender, RoutedEventArgs e)
     {
-        var writeresult = await RealtimeObj.WriteValue("Main PLC", "Status", 0);
-
-
+        var writeresult = await RealtimeObj.WriteValue("Compressor", "Run", 1);   //Start Compressor
     }
