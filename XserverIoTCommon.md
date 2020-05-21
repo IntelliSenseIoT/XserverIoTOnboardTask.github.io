@@ -59,3 +59,48 @@
     
     /// Writes value of the quantity of the Source (error return value null)
     public async Task<QuantityWriteResult> WriteValue(string SourceName, string QuantityName, double WriteValue)
+
+### Examples:
+
+    Realtime RealtimeObj = new Realtime();
+
+    ///This must be run first !!!
+    private async void Button_Click_5(object sender, RoutedEventArgs e)
+    {
+        var res = await Authentication.Login("operator", "operator", "192.168.100.1");
+        var res1 = await RealtimeObj.GetSourcesQuantities();
+    }
+
+    private void Button_Click_6(object sender, RoutedEventArgs e)
+    {
+        var res  = RealtimeObj.GetIds("Compressor", "Run");
+    }
+
+    private async void Button_Click_7(object sender, RoutedEventArgs e)
+    {
+        var Status = await RealtimeObj.GetValue("Compressor", "Run");
+    }
+
+    private async void Button_Click_8(object sender, RoutedEventArgs e)
+    {
+        List<QuantitiesRequestItem> Reqs = new List<QuantitiesRequestItem>();
+        QuantitiesRequestItem oner = new QuantitiesRequestItem();
+        QuantitiesRequestItem oner1 = new QuantitiesRequestItem();
+
+        oner.SourceName = "Compressor";
+        oner.QuantityName = "Run";
+
+        oner1.SourceName = "Compressor";
+        oner1.QuantityName = "Fail";
+
+        Reqs.Add(oner);
+        Reqs.Add(oner1);
+        var ress = await RealtimeObj.GetValues(Reqs);
+    }
+
+    private async void Button_Click_9(object sender, RoutedEventArgs e)
+    {
+        var writeresult = await RealtimeObj.WriteValue("Main PLC", "Status", 0);
+
+
+    }
