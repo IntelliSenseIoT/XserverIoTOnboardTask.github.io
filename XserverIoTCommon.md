@@ -39,3 +39,23 @@
 
     /// POST RestAPI request with Auth object
     public static async Task<IO.RestClient.RestClient.Result> RestClientPOSTAuthObj(string RequestUri, ServiceName Service, object SerializeObject)
+
+## Realtime class methods and objects:
+
+    public List<ISourceInfo> ListOfSources { get; internal set; } = new List<ISourceInfo>();
+    public List<ISourceQuantitiesInfo> ListOfQuantities { get; internal set; } = new List<ISourceQuantitiesInfo>();
+   
+    /// Uploads ListOfSources and ListOfQuantities objects from Xserver.Com service   
+    public async Task<Result> GetSourcesQuantities()
+    
+    /// Get SourceId and QuantityId (error return value null)
+    public QuantityInfo GetIds(string SourceName, string QuantityName)
+   
+    /// Gets value of the quantity of the Source (error return value null)
+    public async Task<QuantityValueItem> GetValue(string SourceName, string QuantityName)
+   
+    /// Gets values of the quantities of the Sources (error return value null)
+    public async Task<List<QuantityValueItem>> GetValues(List<QuantitiesRequestItem> QuantitiesRequestList)
+    
+    /// Writes value of the quantity of the Source (error return value null)
+    public async Task<QuantityWriteResult> WriteValue(string SourceName, string QuantityName, double WriteValue)
