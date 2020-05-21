@@ -6,6 +6,8 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 More details: https://www.intellisense-iot.com/
 Technical overview: https://www.youtube.com/watch?v=_fmbNuYwyqE&list=UUcLou6GZjtQRWgN1ukcglpg&index=14        
 
+![](images/XserverIoTConnectivity.png)
+
 # XserverIoTOnboardTask:
 
 ## Required UWP Target settings:
