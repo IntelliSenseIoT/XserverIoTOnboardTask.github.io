@@ -17,9 +17,7 @@
 ## Example:
 
         #region Helpers
-        //Log service events and errors
-        ServiceLog ServiceLogging = new ServiceLog();
-        TaskHandler OnboardTaskHandler = new TaskHandler();
+        //.....
         Realtime RObj = new Realtime();
         #endregion
 
@@ -52,7 +50,7 @@
             var result = await RObj.GetSourcesQuantities();
             if (result.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
+Compressor                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -65,25 +63,21 @@
 
             ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
         }
-
-        /// <summary>
+       
         /// IoT Onboard Task
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void OnboardTask(object sender, EventArgs e)
         {
             try
             {
                 //Todo: Type your onboard task code here
 
-                var Light = await RObj.GetValue("Main PLC", "Light");
+                var Light = await RObj.GetValue("Compressor", "Run");
 
-                var Status =await  RObj.GetValue("Main PLC", "Status");
+                var Status =await  RObj.GetValue("Compressor", "Valve - Status");
 
                 if (Light.Value >0 && Status.Value !=1)
                 {
-                    var writeresult = await RObj.WriteValue("Main PLC", "Status", 1);
+                    var writeresult = await RObj.WriteValue("Compressor", "Valve - Status", 1);
                 }
             }
             catch (Exception ex)
