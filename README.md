@@ -50,7 +50,7 @@
             var result = await RObj.GetSourcesQuantities();
             if (result.Success == false)
             {
-Compressor                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
+                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
                 error = true;
             }
             #endregion
