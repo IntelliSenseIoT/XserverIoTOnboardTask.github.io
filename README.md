@@ -14,4 +14,82 @@
 
     checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
 
+## Example:
+
+        #region Helpers
+        //Log service events and errors
+        ServiceLog ServiceLogging = new ServiceLog();
+        TaskHandler OnboardTaskHandler = new TaskHandler();
+        Realtime RObj = new Realtime();
+        #endregion
+
+        private static BackgroundTaskDeferral _Deferral = null;
+        public void Run(IBackgroundTaskInstance taskInstance)
+        {
+            _Deferral = taskInstance.GetDeferral();
+
+            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+
+            //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
+            //More details about loopback enable: https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io
+
+            Init();
+        }
+        private async void Init()      //Initialize service
+        {
+            bool error = false;
+
+            #region Login to Xserver.IoT Service
+            var res = await Authentication.Login("operator", "operator");
+            if (res.Success == false)
+            {
+                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
+                error = true;
+            }
+            #endregion
+
+            #region Gets List of Sources and Quantities
+            var result = await RObj.GetSourcesQuantities();
+            if (result.Success == false)
+            {
+                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
+                error = true;
+            }
+            #endregion
+
+            #region Initialize and Start IoT OnboardTask
+            OnboardTaskHandler.WaitingTime = TaskHandlerPeriod;
+            OnboardTaskHandler.ThresholdReached += OnboardTask;
+            OnboardTaskHandler.Run();
+            #endregion
+
+            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+        }
+
+        /// <summary>
+        /// IoT Onboard Task
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void OnboardTask(object sender, EventArgs e)
+        {
+            try
+            {
+                //Todo: Type your onboard task code here
+
+                var Light = await RObj.GetValue("Main PLC", "Light");
+
+                var Status =await  RObj.GetValue("Main PLC", "Status");
+
+                if (Light.Value >0 && Status.Value !=1)
+                {
+                    var writeresult = await RObj.WriteValue("Main PLC", "Status", 1);
+                }
+            }
+            catch (Exception ex)
+            {
+                ServiceLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+            }
+            OnboardTaskHandler.Run();  //Task continues to run
+        }
 
