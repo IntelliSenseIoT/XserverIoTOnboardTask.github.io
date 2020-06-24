@@ -7,6 +7,7 @@ using Windows.ApplicationModel.Background;
 using Service.Common;
 using File.Log;
 using XserverIoTCommon;
+using OPCUA.Library;
 
 namespace XServerIoTOnboardTaskProject
 {
@@ -22,7 +23,7 @@ namespace XServerIoTOnboardTaskProject
         //Service display name
         private const string ServiceDisplayName = "Xserver.OnboardTask";
         //Task Handler Period (ms)
-        private const int TaskHandlerPeriod = 500;
+        private const int TaskHandlerPeriod = 1000;
         #endregion
 
         #region Helpers
