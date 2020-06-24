@@ -21,7 +21,7 @@ Nugets: https://www.nuget.org/packages/XserverIoTCommon/
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
-## Before use app, enable loopback on Windows 10 IoT Core::
+## Before use app, enable loopback on the Windows 10 IoT Core::
 
     checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
 
