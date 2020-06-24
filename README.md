@@ -29,9 +29,9 @@ Nugets: https://www.nuget.org/packages/XserverIoTCommon/
 
 ![](images/LoopOpenDevicePortal.png)
 
-### 2) Run command
+### 2) Run command (checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm')
 
-![](images/LoopOpenDevicePortal.png)
+![](images/LoopDevicePortal.png)
 
 ## Example 1 (Real-time):
 
