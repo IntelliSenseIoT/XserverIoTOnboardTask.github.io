@@ -25,7 +25,7 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 
     checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
 
-### 1) Open in Device Portal (In IoT Explorer - https://www.intellisense-iot.com/downloads)
+### 1) Open in the Device Portal (In IoT Explorer - https://www.intellisense-iot.com/downloads)
 
 ![](images/LoopOpenDevicePortal.png)
 
