@@ -29,6 +29,10 @@ Nugets: https://www.nuget.org/packages/XserverIoTCommon/
 
 ![](images/LoopOpenDevicePortal.png)
 
+### 2) Run command
+
+![](images/LoopOpenDevicePortal.png)
+
 ## Example 1 (Real-time):
 
         #region Helpers
