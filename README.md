@@ -29,6 +29,8 @@ Nugets: https://www.nuget.org/packages/XserverIoTCommon/
 
 ![](images/LoopOpenDevicePortal.png)
 
+Default Username and Password: Poweruser,IoTServer1234
+
 ### 2) Run command (checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm')
 
 ![](images/LoopDevicePortal.png)
