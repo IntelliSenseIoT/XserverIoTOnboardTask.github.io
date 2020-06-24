@@ -25,6 +25,10 @@ Nugets: https://www.nuget.org/packages/XserverIoTCommon/
 
     checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
 
+### 1) Open in Device Portal (In IoT Explorer - https://www.intellisense-iot.com/downloads)
+
+![](images/LoopOpenDevicePortal.png)
+
 ## Example 1 (Real-time):
 
         #region Helpers
