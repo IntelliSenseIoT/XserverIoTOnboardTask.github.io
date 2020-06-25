@@ -266,36 +266,46 @@ Default Username and Password: Poweruser,IoTServer1234
             {
                 //Todo: Type your onboard task code here
                 
-                //Reads OPCUA nodes example
-                List<OPCReadNode> OPCNodes = new List<OPCReadNode>();
-
-                OPCReadNode onenode = new OPCReadNode();
-
-                onenode.Name = "Counter";
-                onenode.NodeId = "ns=3;s=Counter";
-                OPCNodes.Add(onenode);
-
-                var result = OPCUAClient.ReadValues(OPCNodes);
-                
-                if (result.Success == true)
+                if (OPCUAClient.Connected == true)
                 {
-                    foreach (var item in result.OPCValues)
+                    List<OPCReadNode> OPCNodes = new List<OPCReadNode>();
+
+                    OPCReadNode onenode = new OPCReadNode();
+
+                    onenode.Name = "Counter";
+                    onenode.NodeId = "ns=3;s=Counter";
+                    OPCNodes.Add(onenode);
+
+                    var result = OPCUAClient.ReadValues(OPCNodes);
+
+                    if (result.Success == true)
                     {
-                        if (item.IsGood == true)
+                        foreach (var item in result.OPCValues)
                         {
-                            List<LogItem> LogItems = new List<LogItem>();
+                            if (item.IsGood == true)
+                            {
+                                List<LogItem> LogItems = new List<LogItem>();
 
-                            LogItem oneitem = new LogItem();
+                                LogItem oneitem = new LogItem();
 
-                            oneitem.SourceName = "VirtualDev";
-                            oneitem.QuantityName = "Test1";
-                            
-                            oneitem.Value = Convert.ToDouble(item.Value);
+                                oneitem.SourceName = "VirtualDev";
+                                oneitem.QuantityName = "Test1";
 
-                            LogItems.Add(oneitem);
+                                oneitem.Value = Convert.ToDouble(item.Value);
 
-                            var resultlog = await RObj.PeriodicLogAddNewValues(LogItems);
+                                LogItems.Add(oneitem);
+
+                                var resultlog = await RObj.PeriodicLogAddNewValues(LogItems);
+                            }
                         }
+                    }
+                }
+                else
+                {
+                    OPCUAClient.Connect();
+                    if (OPCUAClient.Connected == false)
+                    {
+                        await Task.Delay(15000);
                     }
                 }
             }
