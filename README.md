@@ -200,7 +200,7 @@ Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
 
 ## Example 3 (Real-time value(s) logging):
 
-### Create Virtual Device
+### Create Virtual Device:
 
 ![](images/DevExt1.png)
 
