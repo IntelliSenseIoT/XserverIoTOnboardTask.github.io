@@ -28,7 +28,6 @@ namespace XServerIoTOnboardTaskProject
 
         #region Helpers
         //Log service events and errors
-        ServiceLog ServiceLogging = new ServiceLog();
         TaskHandler OnboardTaskHandler = new TaskHandler();
         #endregion
 
@@ -38,7 +37,7 @@ namespace XServerIoTOnboardTaskProject
         {
             _Deferral = taskInstance.GetDeferral();
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
             //More details about loopback enable: https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io
@@ -50,7 +49,7 @@ namespace XServerIoTOnboardTaskProject
             OnboardTaskHandler.ThresholdReached += OnboardTask;
             OnboardTaskHandler.Run();
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
         }
 
         /// <summary>
@@ -66,7 +65,7 @@ namespace XServerIoTOnboardTaskProject
             }
             catch (Exception ex)
             {
-                ServiceLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
             }
             OnboardTaskHandler.Run();  //Task continues to run
         }
