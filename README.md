@@ -47,6 +47,7 @@ Default Username and Password: Poweruser,IoTServer1234
         {
             _Deferral = taskInstance.GetDeferral();
 
+            EventLogging.Initialize();
             EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
@@ -120,6 +121,7 @@ Default Username and Password: Poweruser,IoTServer1234
         {
             _Deferral = taskInstance.GetDeferral();
 
+            EventLogging.Initialize();
             EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
@@ -207,6 +209,7 @@ Default Username and Password: Poweruser,IoTServer1234
         {
             _Deferral = taskInstance.GetDeferral();
 
+            EventLogging.Initialize();
             EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
