@@ -110,6 +110,8 @@ Default Username and Password: Poweruser,IoTServer1234
 
 ## Example 2 (OPCUA communication):
 
+Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
+
         #region Helpers
         //.....
         Realtime RObj = new Realtime();
@@ -198,6 +200,8 @@ Default Username and Password: Poweruser,IoTServer1234
 
 ## Example 3 (Real-time value(s) logging):
 
+### Create Virtual Device
+
 ![](images/DevExt1.png)
 
 ![](images/DevExt2.png)
@@ -206,6 +210,7 @@ Default Username and Password: Poweruser,IoTServer1234
 
 ![](images/DevExt4.png)
 
+### Code:
 
         #region Helpers
         //.....
