@@ -47,7 +47,7 @@ Default Username and Password: Poweruser,IoTServer1234
         {
             _Deferral = taskInstance.GetDeferral();
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
           
@@ -61,7 +61,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var res = await Authentication.Login("operator", "operator");
             if (res.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -70,7 +70,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var result = await RObj.GetSourcesQuantities();
             if (result.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -81,7 +81,7 @@ Default Username and Password: Poweruser,IoTServer1234
             OnboardTaskHandler.Run();
             #endregion
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
         }
        
         /// IoT Onboard Task
@@ -102,7 +102,7 @@ Default Username and Password: Poweruser,IoTServer1234
             }
             catch (Exception ex)
             {
-                ServiceLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
             }
             OnboardTaskHandler.Run();  //Task continues to run
         }
@@ -120,7 +120,7 @@ Default Username and Password: Poweruser,IoTServer1234
         {
             _Deferral = taskInstance.GetDeferral();
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
           
@@ -134,7 +134,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var res = await Authentication.Login("operator", "operator");
             if (res.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -143,7 +143,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var result = await RObj.GetSourcesQuantities();
             if (result.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -155,7 +155,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var resopcua = OPCUAClient.Connect();
             if (resopcua.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + resopcua.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + resopcua.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -166,7 +166,7 @@ Default Username and Password: Poweruser,IoTServer1234
             OnboardTaskHandler.Run();
             #endregion
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
         }
        
         /// IoT Onboard Task
@@ -189,7 +189,7 @@ Default Username and Password: Poweruser,IoTServer1234
             }
             catch (Exception ex)
             {
-                ServiceLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
             }
             OnboardTaskHandler.Run();  //Task continues to run
         }
@@ -207,7 +207,7 @@ Default Username and Password: Poweruser,IoTServer1234
         {
             _Deferral = taskInstance.GetDeferral();
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
           
@@ -221,7 +221,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var res = await Authentication.Login("operator", "operator");
             if (res.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -230,7 +230,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var result = await RObj.GetSourcesQuantities();
             if (result.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -242,7 +242,7 @@ Default Username and Password: Poweruser,IoTServer1234
             var resopcua = OPCUAClient.Connect();
             if (resopcua.Success == false)
             {
-                ServiceLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + resopcua.ErrorMessage);
+                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + resopcua.ErrorMessage);
                 error = true;
             }
             #endregion
@@ -253,7 +253,7 @@ Default Username and Password: Poweruser,IoTServer1234
             OnboardTaskHandler.Run();
             #endregion
 
-            ServiceLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
         }
        
         /// IoT Onboard Task
@@ -298,7 +298,7 @@ Default Username and Password: Poweruser,IoTServer1234
             }
             catch (Exception ex)
             {
-                ServiceLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
             }
             OnboardTaskHandler.Run();  //Task continues to run
         }
