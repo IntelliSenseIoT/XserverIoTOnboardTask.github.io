@@ -198,6 +198,15 @@ Default Username and Password: Poweruser,IoTServer1234
 
 ## Example 3 (Real-time value(s) logging):
 
+![](images/DevExt1.png)
+
+![](images/DevExt2.png)
+
+![](images/DevExt3.png)
+
+![](images/DevExt4.png)
+
+
         #region Helpers
         //.....
         Realtime RObj = new Realtime();
