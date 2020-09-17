@@ -330,5 +330,20 @@ Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
             OnboardTaskHandler.Run();  //Task continues to run
         }
 
-# Example 4 (Direct Method trough Cloud connection)
+## Example 4 (Direct Method trough Cloud connection)
 
+### Add new IoT Device to IoT Explorer:
+
+![](images/Set cloud connection.png)
+
+### Login
+
+![](images/Login.png)
+
+## Create direct method parameter
+
+![](IoT Explorer send parameters.png)
+
+## Debug OnboardTask
+
+![](images/NewParameters.png)
