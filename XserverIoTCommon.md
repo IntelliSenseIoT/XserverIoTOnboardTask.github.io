@@ -8,6 +8,16 @@
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
+# Required UWP Target settings:
+
+    Min version: Windows 10 Fall Creators Update (10.0; Build 16299)
+
+# Required UWP Capabilities:
+
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer"/>
+    <Capability Name="privateNetworkClientServer"/>
+
 # Authentication class:
 
     // Log in to Xserver.IoT
@@ -68,6 +78,20 @@
 
     //Adds a new event into the EventLog
     public static void AddLogMessage(MessageType MessageType, string Message)
+
+# HttpRestServerService methods: 
+
+    /// If true then REST HTTP server is running
+    public bool IsStartHttpServer { get; set; }
+
+    /// Start and Initialize Http server
+    public async Task<IO.SimpleHttpServer.Result> HttpRESTServerStart()
+
+    /// Stop Http server   
+    public async Task<IO.SimpleHttpServer.Result> HttpRESTServerStop()
+
+    /// Send response to client 
+    public async Task<IO.SimpleHttpServer.Result> ServerResponse(HTTPStatusCodes HTTPStatus, Windows.Storage.Streams.IOutputStream OStream, string SendData)
 
 # Examples:
 
