@@ -342,7 +342,7 @@ Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
 
 ## Create direct method parameter
 
-![](IoTExplorersendparameters.png)
+![](images/IoTExplorersendparameters.png)
 
 ## Debug OnboardTask
 
