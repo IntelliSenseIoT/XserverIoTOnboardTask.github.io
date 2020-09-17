@@ -329,3 +329,6 @@ Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
             }
             OnboardTaskHandler.Run();  //Task continues to run
         }
+
+# Example 4 (Direct Method trough Cloud connection)
+
