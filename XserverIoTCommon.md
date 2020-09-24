@@ -39,14 +39,8 @@
 
 # RestAPI methods:
 
-    /// GET RestAPI request
-    public static async Task<IO.RestClient.RestClient.Result> RestClientGET(string RequestUri, ServiceName Service)    
- 
-    /// POST RestAPI request
-    public static async Task<IO.RestClient.RestClient.Result> RestClientPOST(string RequestUri, ServiceName Service, object objectcontent)
-
-    /// POST RestAPI request with Auth object
-    public static async Task<IO.RestClient.RestClient.Result> RestClientPOSTAuthObj(string RequestUri, ServiceName Service, object SerializeObject)
+   Use Xserver.IoT.Connectivity.Interface class REST API methods.
+   More technical details are in the Xserver.IoT.Connectivity.Interface documentation.
 
 # Realtime objects and methods:
 
