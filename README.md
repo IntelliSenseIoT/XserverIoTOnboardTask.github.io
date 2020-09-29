@@ -120,8 +120,9 @@ Default Username and Password: Poweruser,IoTServer1234
 
 ## Example 2 (OPCUA communication):
 
-    Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
-    First step add OPCUA.Library nuget to your project.
+Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
+    
+        //First step add OPCUA.Library nuget to your project
 
         using OPCUA.Library;
 
