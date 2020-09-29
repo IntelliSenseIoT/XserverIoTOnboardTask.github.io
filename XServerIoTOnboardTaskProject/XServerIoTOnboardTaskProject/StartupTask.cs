@@ -7,7 +7,6 @@ using Windows.ApplicationModel.Background;
 using Service.Common;
 using File.Log;
 using XserverIoTCommon;
-using OPCUA.Library;
 using IO.SimpleHttpServer;
 using Newtonsoft.Json;
 using Xserver.IoT.Connectivity.Interface;
