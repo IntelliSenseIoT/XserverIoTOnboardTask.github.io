@@ -4,8 +4,8 @@ Xserver.IoT.Framework can easily manage data from field devices to Cloud and SQL
 This capability allows the use of reporting, analysis and AI software (Machine Learning, Power BI, SAP, Energy Management, Smart City software, etc.) to access information from devices for data collection, trending, alarm/event management, analysis, and other functions.
 
 - More details: https://www.intellisense-iot.com/
-- Technical overview: https://www.youtube.com/watch?v=_fmbNuYwyqE&list=UUcLou6GZjtQRWgN1ukcglpg&index=14        
-- Nugets: https://www.nuget.org/packages/XserverIoTCommon/
+- [Technical overview](https://www.youtube.com/watch?v=_fmbNuYwyqE&list=UUcLou6GZjtQRWgN1ukcglpg&index=14)        
+- [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 
 ![](images/XserverIoTConnectivity.png)
 
@@ -17,34 +17,28 @@ This capability allows the use of reporting, analysis and AI software (Machine L
     On the Package.appxmanifest go to Packaging tab -> Choose Certificate
     In the new window click "Select a Certificate..." if you have one, or create a certificate if you haven't created one
 
-More details: https://stackoverflow.com/questions/57578299/uwp-no-certificate-found-with-the-supplied-thumbprint
+[More details](https://stackoverflow.com/questions/57578299/uwp-no-certificate-found-with-the-supplied-thumbprint)
     
 # XserverIoTOnboardTask:
 
-## Required UWP Target settings:
+## Required UWP Target settings
 
     Min version: Windows 10 Fall Creators Update (10.0; Build 16299) 
 
-## Required UWP Capabilities:
+## Required Xserver.IoT firmware
+
+    Min version: 10.2
+
+## Required UWP Capabilities
 
     <Capability Name="internetClient" />
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
-## Before use app, enable loopback on the Windows 10 IoT Core::
+## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2)
 
-    checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
-
-### 1) Open in the Device Portal (In the IoT Explorer - https://www.intellisense-iot.com/downloads)
-
-![](images/LoopOpenDevicePortal.png)
-
-Default Username and Password: Poweruser,IoTServer1234
-
-### 2) Run command (checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm')
-
-![](images/LoopDevicePortal.png)
-
+[More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
+    
 ## Example 1 (Real-time):
 
         #region Helpers
@@ -121,6 +115,10 @@ Default Username and Password: Poweruser,IoTServer1234
 ## Example 2 (OPCUA communication):
 
 Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
+    
+        //First step add OPCUA.Library nuget to your project
+
+        using OPCUA.Library;
 
         #region Helpers
         //.....
