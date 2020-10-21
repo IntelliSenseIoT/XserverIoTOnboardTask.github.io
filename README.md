@@ -4,8 +4,8 @@ Xserver.IoT.Framework can easily manage data from field devices to Cloud and SQL
 This capability allows the use of reporting, analysis and AI software (Machine Learning, Power BI, SAP, Energy Management, Smart City software, etc.) to access information from devices for data collection, trending, alarm/event management, analysis, and other functions.
 
 - More details: https://www.intellisense-iot.com/
-- Technical overview: https://www.youtube.com/watch?v=_fmbNuYwyqE&list=UUcLou6GZjtQRWgN1ukcglpg&index=14        
-- Nugets: https://www.nuget.org/packages/XserverIoTCommon/
+- [Technical overview](https://www.youtube.com/watch?v=_fmbNuYwyqE&list=UUcLou6GZjtQRWgN1ukcglpg&index=14)        
+- [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 
 ![](images/XserverIoTConnectivity.png)
 
@@ -17,7 +17,7 @@ This capability allows the use of reporting, analysis and AI software (Machine L
     On the Package.appxmanifest go to Packaging tab -> Choose Certificate
     In the new window click "Select a Certificate..." if you have one, or create a certificate if you haven't created one
 
-More details: https://stackoverflow.com/questions/57578299/uwp-no-certificate-found-with-the-supplied-thumbprint
+[More details](https://stackoverflow.com/questions/57578299/uwp-no-certificate-found-with-the-supplied-thumbprint)
     
 # XserverIoTOnboardTask:
 
@@ -38,9 +38,6 @@ More details: https://stackoverflow.com/questions/57578299/uwp-no-certificate-fo
 ## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2):
 
 [More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
-    
-[a relative link](XserverIoTOnboardTask.github.io/Enable loopback on the Windows 10 IoT Core.md)
-    
     
 ## Example 1 (Real-time):
 
