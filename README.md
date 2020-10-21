@@ -43,101 +43,10 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 
 [Example 1 - Real-time values](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/Real-time%20values.md)
 
+[Example 2 - IoT Server and OPCUA Server communication](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/IoT%20Server%20and%20OPCUA%20Server%20communication.md)
 
 
-## Example 2 (OPCUA communication):
 
-Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
-    
-        //First step add OPCUA.Library nuget to your project
-
-        using OPCUA.Library;
-
-        #region Helpers
-        //.....
-        Realtime RObj = new Realtime();
-        OPCUAClient OPCUAClient = new OPCUAClient();
-        #endregion
-
-        private static BackgroundTaskDeferral _Deferral = null;
-        public void Run(IBackgroundTaskInstance taskInstance)
-        {
-            _Deferral = taskInstance.GetDeferral();
-
-            EventLogging.Initialize();
-            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
-
-            //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
-          
-            Init();
-        }
-        private async void Init()      //Initialize service
-        {
-            bool error = false;
-
-            #region Login to Xserver.IoT Service
-            var res = await Authentication.Login("operator", "operator");
-            if (res.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
-                error = true;
-            }
-            #endregion
-
-            #region Gets List of Sources and Quantities
-            var result = await RObj.GetSourcesQuantities();
-            if (result.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
-                error = true;
-            }
-            #endregion
-
-            #region Connect to the OPCUA Server
-            var certificateFile = await Package.Current.InstalledLocation.GetFileAsync(@"Client.Uwp.pfx");
-            OPCUAClient.CertificateFilePath = certificateFile.Path;
-            OPCUAClient.ServerAddress = "opc.tcp://COMPUTERNAME:53530/OPCUA/SimulationServer";
-            var resopcua = OPCUAClient.Connect();
-            if (resopcua.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + resopcua.ErrorMessage);
-                error = true;
-            }
-            #endregion
-
-            #region Initialize and Start IoT OnboardTask
-            OnboardTaskHandler.WaitingTime = TaskHandlerPeriod;
-            OnboardTaskHandler.ThresholdReached += OnboardTask;
-            OnboardTaskHandler.Run();
-            #endregion
-
-            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
-        }
-       
-        /// IoT Onboard Task
-        private async void OnboardTask(object sender, EventArgs e)
-        {
-            try
-            {
-                //Todo: Type your onboard task code here
-                
-                //Reads OPCUA nodes example
-                List<OPCReadNode> OPCNodes = new List<OPCReadNode>();
-
-                OPCReadNode onenode = new OPCReadNode();
-
-                onenode.Name = "Counter";
-                onenode.NodeId = "ns=3;s=Counter";
-                OPCNodes.Add(onenode);
-
-                var result = OPCUAClient.ReadValues(OPCNodes);
-            }
-            catch (Exception ex)
-            {
-                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
-            }
-            OnboardTaskHandler.Run();  //Task continues to run
-        }
 
 ## Example 3 (Real-time value(s) logging):
 
