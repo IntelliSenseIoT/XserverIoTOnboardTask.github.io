@@ -2,15 +2,9 @@
 
     Min version: Windows 10 Fall Creators Update (10.0; Build 16299)
 
-# Required UWP Capabilities:
+# Required Xserver.IoT firmware:
 
-    <Capability Name="internetClient" />
-    <Capability Name="internetClientServer"/>
-    <Capability Name="privateNetworkClientServer"/>
-
-# Required UWP Target settings:
-
-    Min version: Windows 10 Fall Creators Update (10.0; Build 16299)
+    Min version: 10.2
 
 # Required UWP Capabilities:
 
@@ -87,122 +81,28 @@
     /// Send response to client 
     public async Task<IO.SimpleHttpServer.Result> ServerResponse(HTTPStatusCodes HTTPStatus, Windows.Storage.Streams.IOutputStream OStream, string SendData)
 
-# Examples:
+# OnboardTask methods:
 
-    private async void Button_Click(object sender, RoutedEventArgs e)
-    {
-        var res = await Authentication.Login("operator", "operator", "10.29.2.154");
-    }
+    /// Gets Onboard Task config    
+    public static async Task<Result> GetConfig()
+    
+    /// Gets Onboard Task properties
+    public static async Task<Result> GetProperties()
+     
+    /// Saves new onboard task config to Onboard Storage
+    public static async Task<Result> SaveConfig(string NewConfig)
+    
+    /// Saves new onboard task properties to Onboard Storage
+    public static async Task<Result> SaveProperties(string NewProperties)
 
-    private async void Button_Click_1(object sender, RoutedEventArgs e)
-    {
-        var result = await RestAPI.RestClientGET("/com/getsources", ServiceName.Com);
-    }
+# DeviceTwin methods:
 
-    private async void Button_Click_2(object sender, RoutedEventArgs e)
-    {
-        var result = await RestAPI.RestClientPOSTAuthObj("/data/system/gettemplatedevices", ServiceName.Data, null);
-    }
-
-    private async void Button_Click_3(object sender, RoutedEventArgs e)
-    {
-        var res = await Authentication.Login("admin", "admin", "10.29.2.12");
-    }
-
-    private async void Button_Click_4(object sender, RoutedEventArgs e)
-    {
-        IActiveAlarms AlarmRequest = new IActiveAlarms();
-        
-        AlarmRequest.IUserId = Authentication.GetComServiceUserId();
-        AlarmRequest.NumberOfItems = 0; //No Limit
-
-        var resultackalarm = await RestAPI.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
-    }
-
-    Realtime RealtimeObj = new Realtime();
-
-    private async void Button_Click_5(object sender, RoutedEventArgs e)
-    {
-        var res = await Authentication.Login("operator", "operator", "10.29.2.154");
-
-        var res1 = await RealtimeObj.GetSourcesQuantities();
-    }
-
-    private void Button_Click_6(object sender, RoutedEventArgs e)
-    {
-        var res  = RealtimeObj.GetIds("Main PLC", "Light");
-    }
-
-    private async void Button_Click_7(object sender, RoutedEventArgs e)
-    {
-        var Light = await RealtimeObj.GetValue("Main PLC", "Light");
-    }
-
-    private async void Button_Click_8(object sender, RoutedEventArgs e)
-    {
-        List<QuantitiesRequestItem> Reqs = new List<QuantitiesRequestItem>();
-        QuantitiesRequestItem oner = new QuantitiesRequestItem();
-        QuantitiesRequestItem oner1 = new QuantitiesRequestItem();
-
-        oner.SourceName = "Main PLC";
-        oner.QuantityName = "Light";
-
-        oner1.SourceName = "Main PLC";
-        oner1.QuantityName = "Status";
-
-        Reqs.Add(oner);
-        Reqs.Add(oner1);
-        var ress = await RealtimeObj.GetValues(Reqs);
-    }
-
-    private async void Button_Click_9(object sender, RoutedEventArgs e)
-    {
-        var writeresult = await RealtimeObj.WriteValue("Main PLC", "Status", 0);
-    }
-
-    private async void Button_Click_10(object sender, RoutedEventArgs e)
-    {
-        DateTime actualtime = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, DateTime.UtcNow.Hour, DateTime.UtcNow.Minute, DateTime.UtcNow.Second);
-
-        List<LogItem> LogItems = new List<LogItem>();
-
-        LogItem oneitem = new LogItem();
-
-        oneitem.SourceName = "VirtualDev";
-        oneitem.QuantityName = "Test1";
-        oneitem.TimestampUTC = null;            //If TimestampUTC is null, the current UTC is used.
-        oneitem.Value = DateTime.Now.Second;
-
-        LogItems.Add(oneitem);
-
-        LogItem oneitem1 = new LogItem();
-
-        oneitem1.SourceName = "VirtualDev";
-        oneitem1.QuantityName = "Test2";
-        oneitem1.TimestampUTC = actualtime;    //If TimestampUTC is null, the current UTC is used.
-        oneitem1.Value = DateTime.Now.Second + 10;
-
-        LogItems.Add(oneitem1);
-
-        var result = await RealtimeObj.PeriodicLogAddNewValues(LogItems);
-    }
-
-    private async  void Button_Click_11(object sender, RoutedEventArgs e)
-    {
-        DateTime actualtime = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, DateTime.UtcNow.Hour, DateTime.UtcNow.Minute, DateTime.UtcNow.Second);
-
-        List<EventItem> EventItems = new List<EventItem>();
-
-        EventItem oneitem = new EventItem();
-
-        oneitem.SourceName = "VirtualDev";
-        oneitem.QuantityName = "Test3";
-        oneitem.TimestampUTC = actualtime;      //If TimestampUTC is null, the current UTC is used.
-        oneitem.Value = DateTime.Now.Second;
-        oneitem.ChangePercent = DateTime.Now.Second+10;
-        oneitem.TolerancePercentage = DateTime.Now.Second;
-
-        EventItems.Add(oneitem);
-
-        var result = await RealtimeObj.DifferenceLogAddNewValues(EventItems);
-    }
+    /// Gets Desired properties of Device Twin
+    public static async Task<ResultDesiredProperties> GetDesiredProperties()
+    
+    /// Gets Reported properties of Device Twin
+    public static async Task<ResultReportedProperties> GetReportedProperties()
+    
+    /// Saves new ReportedProperties
+    public static async Task<Result> SaveReportedProperties(List<DeviceTwinProperty> NewReportedProperties)
+    
