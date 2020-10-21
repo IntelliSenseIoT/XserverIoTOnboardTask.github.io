@@ -25,13 +25,17 @@ More details: https://stackoverflow.com/questions/57578299/uwp-no-certificate-fo
 
     Min version: Windows 10 Fall Creators Update (10.0; Build 16299) 
 
+## Required Xserver.IoT firmware
+
+    Min version: 10.2
+
 ## Required UWP Capabilities:
 
     <Capability Name="internetClient" />
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
-## Before use app, enable loopback on the Windows 10 IoT Core::
+## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2):
 
     checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
 
