@@ -38,79 +38,12 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 ## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2)
 
 [More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
-    
-## Example 1 (Real-time):
 
-        #region Helpers
-        //.....
-        Realtime RObj = new Realtime();
-        #endregion
+# Examples:
 
-        private static BackgroundTaskDeferral _Deferral = null;
-        public void Run(IBackgroundTaskInstance taskInstance)
-        {
-            _Deferral = taskInstance.GetDeferral();
+[Example 1 - Real-time values](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/Real-time%20values.md)
 
-            EventLogging.Initialize();
-            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
-            //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
-          
-            Init();
-        }
-        private async void Init()      //Initialize service
-        {
-            bool error = false;
-
-            #region Login to Xserver.IoT Service
-            var res = await Authentication.Login("operator", "operator");
-            if (res.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
-                error = true;
-            }
-            #endregion
-
-            #region Gets List of Sources and Quantities
-            var result = await RObj.GetSourcesQuantities();
-            if (result.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
-                error = true;
-            }
-            #endregion
-
-            #region Initialize and Start IoT OnboardTask
-            OnboardTaskHandler.WaitingTime = TaskHandlerPeriod;
-            OnboardTaskHandler.ThresholdReached += OnboardTask;
-            OnboardTaskHandler.Run();
-            #endregion
-
-            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
-        }
-       
-        /// IoT Onboard Task
-        private async void OnboardTask(object sender, EventArgs e)
-        {
-            try
-            {
-                //Todo: Type your onboard task code here
-
-                var Light = await RObj.GetValue("Compressor", "Run");
-
-                var Status =await  RObj.GetValue("Compressor", "Valve - Status");
-
-                if (Light.Value >0 && Status.Value !=1)
-                {
-                    var writeresult = await RObj.WriteValue("Compressor", "Valve - Status", 1);
-                }
-            }
-            catch (Exception ex)
-            {
-                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
-            }
-            OnboardTaskHandler.Run();  //Task continues to run
-        }
 
 ## Example 2 (OPCUA communication):
 
