@@ -43,9 +43,6 @@ namespace XServerIoTOnboardTaskProject
             EventLogging.Initialize();
             EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
-            //Todo: Before use this code, enable loopback in Windows 10 IoT Core: checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
-            //More details about loopback enable: https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io
-
             //Todo: Write your initial code here
 
             //Initialize Http REST server
