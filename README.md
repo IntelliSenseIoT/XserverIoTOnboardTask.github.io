@@ -39,6 +39,9 @@ More details: https://stackoverflow.com/questions/57578299/uwp-no-certificate-fo
 
     [More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
     
+    [a relative link](Enable loopback on the Windows 10 IoT Core.md)
+    
+    
 ## Example 1 (Real-time):
 
         #region Helpers
