@@ -17,7 +17,7 @@
     // Log in to Xserver.IoT
     public static async Task<Result> Login(string UserName, string Password, string ServiceIP = "localhost")
 
-    example: var res = await Authentication.Login("operator", "operator", "10.29.2.154");
+    example: var res = await Authentication.Login("operator", "operator", "192.168.100.15");
 
     // Gets UserId object 
     public static Models.Com.Common.IUserId GetComServiceUserId()
