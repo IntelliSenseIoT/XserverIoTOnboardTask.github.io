@@ -37,18 +37,8 @@ More details: https://stackoverflow.com/questions/57578299/uwp-no-certificate-fo
 
 ## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2):
 
-    checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm'
-
-### 1) Open in the Device Portal (In the IoT Explorer - https://www.intellisense-iot.com/downloads)
-
-![](images/LoopOpenDevicePortal.png)
-
-Default Username and Password: Poweruser,IoTServer1234
-
-### 2) Run command (checknetisolation loopbackexempt -a -n='XServerIoTOnboardTaskProject-uwp_39mgpzy4q2jkm')
-
-![](images/LoopDevicePortal.png)
-
+    [More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
+    
 ## Example 1 (Real-time):
 
         #region Helpers
