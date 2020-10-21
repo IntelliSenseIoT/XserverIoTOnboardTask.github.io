@@ -21,7 +21,7 @@ This capability allows the use of reporting, analysis and AI software (Machine L
     
 # XserverIoTOnboardTask:
 
-## Required UWP Target settings:
+## Required UWP Target settings
 
     Min version: Windows 10 Fall Creators Update (10.0; Build 16299) 
 
@@ -29,13 +29,13 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 
     Min version: 10.2
 
-## Required UWP Capabilities:
+## Required UWP Capabilities
 
     <Capability Name="internetClient" />
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
-## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2):
+## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2)
 
 [More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
     
