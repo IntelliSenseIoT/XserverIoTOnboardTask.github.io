@@ -1,4 +1,4 @@
-## Example 3 (Real-time value(s) logging):
+## Example 3 (OPC UA Real-time value(s) logging):
 
 ### Create Virtual Device:
 
