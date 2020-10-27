@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XServerIoTOnboardTaskProject", "XServerIoTOnboardTaskProject\XServerIoTOnboardTaskProject.csproj", "{940F5309-0F4C-485E-B677-878EA39628B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XserverIoTOnboardTask", "..\XServerIoTOnboardTask_10_2\XserverIoTOnboardTask\XserverIoTOnboardTask.csproj", "{D99CA4F3-0295-4D33-B555-7C683A1D92CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -33,6 +35,24 @@ Global
 		{940F5309-0F4C-485E-B677-878EA39628B4}.Release|x86.ActiveCfg = Release|x86
 		{940F5309-0F4C-485E-B677-878EA39628B4}.Release|x86.Build.0 = Release|x86
 		{940F5309-0F4C-485E-B677-878EA39628B4}.Release|x86.Deploy.0 = Release|x86
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|ARM.Build.0 = Debug|ARM
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|ARM.Deploy.0 = Debug|ARM
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|x64.ActiveCfg = Debug|x64
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|x64.Build.0 = Debug|x64
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|x64.Deploy.0 = Debug|x64
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|x86.ActiveCfg = Debug|x86
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|x86.Build.0 = Debug|x86
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Debug|x86.Deploy.0 = Debug|x86
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|ARM.ActiveCfg = Release|ARM
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|ARM.Build.0 = Release|ARM
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|ARM.Deploy.0 = Release|ARM
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|x64.ActiveCfg = Release|x64
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|x64.Build.0 = Release|x64
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|x64.Deploy.0 = Release|x64
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|x86.ActiveCfg = Release|x86
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|x86.Build.0 = Release|x86
+		{D99CA4F3-0295-4D33-B555-7C683A1D92CE}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
