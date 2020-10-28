@@ -6,12 +6,9 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 - More details: https://www.intellisense-iot.com/
 - [Technical overview](https://www.youtube.com/watch?v=_fmbNuYwyqE&list=UUcLou6GZjtQRWgN1ukcglpg&index=14)        
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
+- [Troubleshooting](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
 ![](images/XserverIoTConnectivity.png)
-
-[Troubleshooting](https://stackoverflow.com/questions/57578299/uwp-no-certificate-found-with-the-supplied-thumbprint)
-
-[More details](https://stackoverflow.com/questions/57578299/uwp-no-certificate-found-with-the-supplied-thumbprint)
     
 # XserverIoTOnboardTask:
 
