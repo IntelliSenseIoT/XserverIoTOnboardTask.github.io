@@ -16,7 +16,9 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
 ![](images/SDKOverview.png)
-    
+
+![](images/ConnectionTechOverview.png)
+
 # XserverIoTOnboardTask:
 
 ## Required UWP Target settings
