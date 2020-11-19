@@ -26,10 +26,6 @@ This capability allows the use of reporting, analysis and AI software (Machine L
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
-## Before use app, enable loopback on the Windows 10 IoT Core (Before version 10.2)
-
-[More details...](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Enable%20loopback%20on%20the%20Windows%2010%20IoT%20Core.md)
-
 # Examples:
 
 [Example 1 - Real-time values](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/1_Real-time%20values.md)
