@@ -6,6 +6,8 @@
 
 - This capabilities allow the use of reporting, analysis, and AI software to access information from devices for data collection, trending, alarm/event management, analysis, remote control, and other functions.
 
+![](images/ConnectionTechOverview2.png)
+
 # Xserver.IoT OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
@@ -16,11 +18,6 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
 ![](images/SDKOverview.png)
-
-**Xserver.IoT connectivity overview**
-<center>Centered text</center>
-
-![](images/ConnectionTechOverview2.png)
 
 # XserverIoTOnboardTask:
 
