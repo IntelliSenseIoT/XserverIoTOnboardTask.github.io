@@ -15,7 +15,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
-![](images/XserverIoTConnectivity.png)
+![](images/SDKOverview.png)
     
 # XserverIoTOnboardTask:
 
