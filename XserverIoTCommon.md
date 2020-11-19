@@ -33,8 +33,8 @@
 
 # RestAPI methods:
 
-   Use Xserver.IoT.Connectivity.Interface class REST API methods.
-   More technical details are in the Xserver.IoT.Connectivity.Interface documentation.
+    Use Xserver.IoT.Connectivity.Interface class REST API methods.
+    More technical details are in the Xserver.IoT.Connectivity.Interface documentation.
 
 # Realtime objects and methods:
 
