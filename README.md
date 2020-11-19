@@ -36,5 +36,5 @@ This capability allows the use of reporting, analysis and AI software (Machine L
 
 [Example 2 - IoT Server and OPCUA Server communication](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/2_IoT%20Server%20and%20OPCUA%20Server%20communication.md)
 
-[Example 3 - OPC UA Real-time value(s) logging](https://github.com/IntelliSenseIoT/3_XserverIoTOnboardTask.github.io/blob/master/examples/OPC%20UA%20Real-time%20value(s)%20logging.md)
+[Example 3 - OPC UA Real-time value(s) logging](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/3_OPC%20UA%20Real-time%20value(s)%20logging.md)
 
