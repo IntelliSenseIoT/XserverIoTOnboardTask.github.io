@@ -1,4 +1,4 @@
-# Troubleshouting
+# Troubleshoutings
 
 ## Cloning the project with Visual Studio 2019 - No certificate found with the supplied thumbprint
 
