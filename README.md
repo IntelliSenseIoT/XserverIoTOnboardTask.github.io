@@ -18,6 +18,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 ![](images/SDKOverview.png)
 
 **Xserver.IoT connectivity overview**
+<center>Centered text</center>
 
 ![](images/ConnectionTechOverview2.png)
 
