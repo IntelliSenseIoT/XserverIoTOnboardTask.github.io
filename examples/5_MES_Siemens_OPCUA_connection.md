@@ -1,4 +1,4 @@
-# MES & Siemens OPC UA connection
+# MES & Siemens S7 PLC OPC UA connection
 
 ![](images/MESExample.png)
 
@@ -46,7 +46,7 @@ POST Requests:
     Response: null object
     HTTP status code: 200 OK
 
-Code:
+## Code:
 
     namespace XServerIoTOnboardTaskProject
     {
