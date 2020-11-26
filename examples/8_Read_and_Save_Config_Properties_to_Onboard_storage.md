@@ -15,6 +15,8 @@ Code:
                 EventLogging.Initialize();
                 EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
+                ... 
+                
                 //Read OnboardTask Config and Properties from Onboard storage of the IoT Server 
                 var onboardconfig = await XserverIoTCommon.OnboardTask.GetConfig();
                 var onboardproperties = await XserverIoTCommon.OnboardTask.GetProperties();
@@ -34,14 +36,7 @@ Code:
                 string content = JsonConvert.SerializeObject(NewParam);
                 await XserverIoTCommon.OnboardTask.SaveProperties(content);
 
-                //Initialize Http REST server
-                await RestServer.HttpRESTServerStart();
-                RestServer.ClientEvent += HttpRestServer_ClientRequestEvent;
-
-                //Initialize and Start IoT OnboardTask
-                OnboardTaskHandler.WaitingTime = TaskHandlerPeriod;
-                OnboardTaskHandler.ThresholdReached += OnboardTask;
-                OnboardTaskHandler.Run();
+                ....
 
                 EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
             }
