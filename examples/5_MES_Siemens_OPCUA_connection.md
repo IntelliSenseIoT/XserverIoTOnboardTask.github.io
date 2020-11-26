@@ -1,4 +1,4 @@
-# MES & Siemens S7 PLC OPC UA connection
+# Example 5 - MES & Siemens S7 PLC OPC UA connection
 
 ![](images/MESExample.png)
 
