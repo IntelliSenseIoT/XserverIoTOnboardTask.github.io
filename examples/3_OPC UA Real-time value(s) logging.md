@@ -88,7 +88,7 @@
                     onenode.NodeId = "ns=3;s=Counter";
                     OPCNodes.Add(onenode);
 
-                    var result = OPCUAClient.ReadValues(OPCNodes);
+                    var result = await OPCUAClient.ReadValues(OPCNodes);
 
                     if (result.Success == true)
                     {
