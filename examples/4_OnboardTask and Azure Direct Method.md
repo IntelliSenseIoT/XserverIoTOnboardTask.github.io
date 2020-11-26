@@ -1,4 +1,4 @@
-## Example 4 (Onboard Task and Azure Direct Method)
+## Example 4 - Onboard Task and Azure Direct Method
 
 ### Add new IoT Device to IoT Explorer:
 
