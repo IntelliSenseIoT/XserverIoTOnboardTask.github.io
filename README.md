@@ -6,6 +6,8 @@
 
 - This capabilities allow the use of reporting, analysis, and AI software to access information from devices for data collection, trending, alarm/event management, analysis, remote control, and other functions.
 
+![](images/ConnectionTechOverview2.png)
+
 # Xserver.IoT OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
@@ -16,7 +18,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
 ![](images/SDKOverview.png)
-    
+
 # XserverIoTOnboardTask:
 
 ## Required UWP Target settings
@@ -40,4 +42,9 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 [Example 2 - IoT Server and OPCUA Server communication](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/2_IoT%20Server%20and%20OPCUA%20Server%20communication.md)
 
 [Example 3 - OPC UA Real-time value(s) logging](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/3_OPC%20UA%20Real-time%20value(s)%20logging.md)
+
+[Example 4 - Onboard Task and Azure Direct Method](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/4_OnboardTask%20and%20Azure%20Direct%20Method.md)
+
+[Example 5 - MES & Siemens S7 PLC OPC UA connection](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/5_MES_Siemens_OPCUA_connection.md)
+
 

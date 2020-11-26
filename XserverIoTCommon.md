@@ -31,10 +31,37 @@
 
     var resultackalarm = await RestAPI.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
 
-# RestAPI methods:
+# RestAPI methods (for Data, Com, Core services):
 
     Use Xserver.IoT.Connectivity.Interface class REST API methods.
     More technical details are in the Xserver.IoT.Connectivity.Interface documentation.
+
+# RestAPI methods for External services:
+
+Properties:
+
+    /// Authentication Username
+    public string Username { get; set; }
+    /// Authentication Password
+    public string Password { get; set; }
+    /// Relative or absolute Uri
+    public string uriString { get; set; } 
+    /// Connection close (Default value = true)
+    public bool ConnectionClose { get; set; }
+
+Methods:
+
+    /// Initialize RestClient
+    public void RestClientInitialize()
+
+    /// Send a GET request.
+    public async Task<Result> RestClientGET(string RequestURI)
+
+    /// Send a PUT request.
+    public async Task<Result> RestClientPUT(string RequestURI, object objectcontent)
+
+    /// Send a POST request.
+    public async Task<Result> RestClientPOST(string RequestURI, object objectcontent)
 
 # Realtime objects and methods:
 
