@@ -2,6 +2,8 @@
 
 The example shows how to handle reported and desired properties with IoT Server.
 
+![](images/DeviceTwin.png)
+
 ##Code:
 
     namespace XServerIoTOnboardTaskProject
