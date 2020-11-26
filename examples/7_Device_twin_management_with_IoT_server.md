@@ -27,6 +27,7 @@ The example shows how to handle reported and desired properties with IoT Server.
                             //Get Desired properties from Azure IoT Hub callback event
                             JObject jsonObj = JObject.Parse(e.HttpContent); 
                             Dictionary<string, string> DesiredPropertiesFromContent = jsonObj.ToObject<Dictionary<string, string>>();
+                            
                             //Gets Desired properties from IoT Server Onboard storage
                             var DesiredPropertiesFromOnboard = await XserverIoTCommon.DeviceTwin.GetDesiredProperties();
                             //Information: DesiredPropertiesFromContent and DesiredPropertiesFromOnboard are equal, because UpdateCallBack event saves Desired properties into the Onboard storage also.
