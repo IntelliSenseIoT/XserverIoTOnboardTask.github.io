@@ -1,4 +1,4 @@
-# Device twin management with IoT server
+# Example 7 - Device twin management with IoT server
 
 The example shows how to handle reported and desired properties with IoT Server.
 
