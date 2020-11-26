@@ -1,4 +1,4 @@
-# Example 8 - Read and Save vonfig and properties to Onboard storage of the IoT Server
+# Example 8 - Read and Save config and properties to Onboard storage of the IoT Server
 
 Code:
 
