@@ -50,3 +50,5 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 [Example 6 - Desired properties change callback](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/6_Device_Twin_Desired_Change_Callback.md)
 
 [Example 7 - Device twin management with IoT server](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/7_Device_twin_management_with_IoT_server.md)
+
+[Example 8 - Read and Save config and properties to Onboard storage of the IoT Server](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/8_Read_and_Save_Config_Properties_to_Onboard_storage.md)
