@@ -1,5 +1,7 @@
 # Example 8 - Read and Save config and properties to Onboard storage of the IoT Server
 
+We have the ability to store properties (parameters, values, etc.) and settings on the onboard storage of the IoT Server.
+
 Code:
 
     namespace XServerIoTOnboardTaskProject
