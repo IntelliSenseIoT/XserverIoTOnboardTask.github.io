@@ -2,6 +2,50 @@
 
 ![](images/MESExample.png)
 
+## REST API interface of the IoT Server
+
+	HttpServerPort = "8010";
+	HttpServerUserName = "MES";
+	HttpServerPassword = "P@ssword";
+
+POST Requests:
+
+    Gets status of assembly station
+    URI: /iotserver/getstatus
+    Method: POST
+    Request GetStatusRequest object
+    Response: GetStatusAnswer object
+    HTTP status code: 200 OK
+
+    The starting signal from MES
+    URI: /iotserver/start
+    Method: POST
+    Request ProcessStart object
+    Response: Answer object
+    HTTP status code: 200 OK
+
+    Cancel the process
+    URI: /iotserver/cancel
+    Method: POST
+    Request ProcessCancel object
+    Response: Answer object
+    HTTP status code: 200 OK
+
+## REST API interface of the MES
+
+    HttpServerPort = "8011";
+	HttpServerUserName = "MES";
+	HttpServerPassword = "P@ssword";
+
+POST Requests:
+
+    Send production data
+    URI: /mes/productreport
+    Method: POST
+    Request ProcessCompleted object
+    Response: null object
+    HTTP status code: 200 OK
+
 Code:
 
     namespace XServerIoTOnboardTaskProject
