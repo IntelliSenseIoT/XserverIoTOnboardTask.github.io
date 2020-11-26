@@ -7,7 +7,7 @@
 - [Case study technical overview](https://1drv.ms/p/s!AguHARCrYGJQgTZzJCJjAb-esjRo?e=uet5rg)
 - [MES Simulator](https://github.com/IntelliSenseIoT/MES-Simulator-for-test)
 - [Siemens S7 OPC UA Simulator](https://github.com/IntelliSenseIoT/Siemens-S7-OPCUA-Simulator)
-- [IoT Server technical tedails](https://www.intellisense-iot.com/)
+- [IoT Server technical details](https://www.intellisense-iot.com/)
 - [OPC UA Simulator download](https://downloads.prosysopc.com/opc-ua-simulation-server-downloads.php)
 
 ## REST API interface of the IoT Server
