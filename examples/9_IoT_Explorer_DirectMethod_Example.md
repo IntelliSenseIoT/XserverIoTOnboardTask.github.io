@@ -1,4 +1,4 @@
-Example 9 - Direct Method Command from IoT Explorer
+# Example 9 - Direct Method Command from IoT Explorer
 
 ![](images/IoTExplorer.png)
 
