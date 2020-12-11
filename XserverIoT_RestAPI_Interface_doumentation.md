@@ -1,4 +1,4 @@
-# Xserver.IoT Rest API interface documentation
+# Xserver.IoT REST API interface documentation
 
 ## Service ports:
 
