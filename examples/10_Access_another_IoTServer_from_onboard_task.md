@@ -2,11 +2,13 @@
 
 In this example below, we will connect to the services of another IoT server.
 
+
 More details about OnboardTask REST API functions: 
 
 [ - XserverIoTCommon class doumentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md)
 
 [ - REST API interface documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoT_RestAPI_Interface_doumentation.md)
+
 
 ## Code:
 
