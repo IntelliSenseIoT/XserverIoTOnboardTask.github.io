@@ -4,6 +4,7 @@ In this example below, we will connect to the services of another IoT server.
 
 More details about OnboardTask RESTAPI functions: 
 
+[ - XserverIoTCommon class doumentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md)
 
 ## Code:
 
