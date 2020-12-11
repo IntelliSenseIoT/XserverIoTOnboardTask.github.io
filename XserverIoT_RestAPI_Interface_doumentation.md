@@ -139,3 +139,96 @@ Xserver.Com manages real-time communication to the field devices (Modbus RTU, TC
         Request: IFilteredActiveAlarm (Use only UserId.UserName and Filters parameters)
         Response: IActiveAlarmResponse 
         HTTP status code: 200 OK, 401 Unauthorized (Username is failed), 404 Not Found (Request is null)
+
+## Xserver.Data API reference:
+
+Xserver.Data service manages settings and forwards data to the cloud or SQL server.
+
+        Gets ServiceStatus object
+        URI: /data/status
+        Method: GET
+        Response: ServiceStatus object
+        HTTP status code: 200 OK
+   
+        *Update Storage
+        URI: /data/system/updatestoragedata
+        Method: POST
+        Request IAuthorizedObject and IStorage (Used properties: Identify, Name, Id) object
+        Response: IResult object
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Change Storage access properties
+        URI: /data/system/changestorageaccess
+        Method: POST
+        Request IAuthorizedObject and IStorage (Used properties: Identify, Name, Id, AccessType, AccessNames) object
+        Response: IResult object
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Change the Name of the Storage
+        URI: /data/system/changestoragename
+        Method: POST
+        Request IAuthorizedObject and IStorageNewName object
+        Response: IResult object
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Add Storage
+        URI: /data/system/addstorage
+        Method: POST
+        Request IAuthorizedObject and IStorage object
+        Response: IResult object and int (StorageId) SerializedObject
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Get Storage
+        URI: /data/system/getstorage
+        Method: POST
+        Request IAuthorizedObject and IStorage (Used properties: Identify, Name, Id) object
+        Response: IResult object Storage SerializedObject
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Get Storage by DataType
+        URI: /data/system/getstorageslistbydatatype
+        Method: POST
+        Request IAuthorizedObject and IStorage (Used properties: DataType - if DataType value is null, empty or '*' get back all of storages) object
+        Response: IResult object List<IStorageInfo> SerializedObject
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Search Storage(s)
+        URI: /data/system/searchstorage
+        Method: POST
+        Request IAuthorizedObject and ISearchStorage object
+        Response: IResult object List<IStorageInfo> SerializedObject
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Get all Storages (administrator privilege necessary)
+        URI: /data/system/getallstorageslistforadmin
+        Method: POST
+        Request IAuthorizedObject object
+        Response: IResult object List<IStorageInfo> SerializedObject
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Remove Storage
+        URI: /data/system/removestorage
+        Method: POST
+        Request IAuthorizedObject and IStorage (Used properties: Identify, Name, Id) object
+        Response: IResult object
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Copy the Storage
+        URI: /data/system/copystorage
+        Method: POST
+        Request IAuthorizedObject and IStorageNewName object
+        Response: IResult object and int (StorageId) SerializedObject
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        *Remove all Storages without the System accesstype of Storages (administrator privilege necessary)
+        URI: /data/system/removeallstoragesforadmin
+        Method: POST
+        Request IAuthorizedObject object
+        Response: IResult object
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed), 404 Not Found (Request is null or empty)
+
+        Gets information about Project (IoT Server instalation place, installer, etc.)
+        URI: /data/getprojectinfo
+        Method: GET
+        Response: SystemDB.Model.ProjectInfo object
+        HTTP status code: 200 OK, 404 Not Found (table is empty)
