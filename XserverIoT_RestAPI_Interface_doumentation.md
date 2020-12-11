@@ -20,5 +20,123 @@
 
 ## Xserver.Com API reference:
 
-Xserver.Com manages real-time communication to the field devices (Modbus RTU, TCP/IP and Device Extension IO, Watchdog, RTC, Time synchronize).
+Xserver.Com manages real-time communication to the field devices (Modbus RTU, TCP/IP and Device Extension IO, Watchdog, RTC, Time synchronize, etc.).
 
+        Gets information about Xserver.Com service status.
+        URI: /com/status
+        Method: GET
+        Response: ServiceStatus object
+        HTTP status code: 200 OK
+
+        Gets Xserver.Com service settings.
+        URI: /com/settings
+        Method: GET
+        Response: ComServiceSettings object
+        HTTP status code: 200 OK
+
+        Gets list of groups (if response Not_Found then the list of the groups is empty)
+        URI: /com/getgroups
+        Method: GET
+        Response: List<Group> object
+        HTTP status code: 200 OK (content is null if SourceGroup or SourceGroup.GroupsList object is null)
+
+        Gets tags of all groups
+        URI: /com/getallgroupstags
+        Method: GET
+        Response: List<string> object
+        HTTP status code: 200 OK (content is null if SourceGroup or SourceGroup.GroupsList object is null)
+
+        Gets Groups by filter (Search in Tag of the Group)
+        URI: /com/getgroupssbyfilter
+        Method: POST
+        Request: List<string> (Filters)
+        Response: List<Group> object
+        HTTP status code: 200 OK, 404 Not Found (request is null)
+
+        Gets list of sources (The list is included SourceId, SourceName, Tag and GroupSettings)
+        URI: /com/getsources
+        Method: GET
+        Response: List<ISourceInfo> object
+        HTTP status code: 200 OK
+
+        Gets list of quantites of sources (The list is included SourceId, SourceName and Quantites properties: QuantityId, QuantityName, QuantityTypeId, QuantityTypeName, Unit)
+        URI: /com/getquantitesofsources
+        Method: GET
+        Response: List<ISourceQuantitiesInfo> object
+        HTTP status code: 200 OK
+
+        Gets list of quantites of one source (The result is included SourceId, SourceName and Quantites properties: QuantityId, QuantityName, QuantityTypeId, QuantityTypeName, Unit)
+        URI: /com/getquantitesofsource
+        Method: POST
+        Request: ISource (Use only the SourceId)
+        Response: ISourceQuantitiesInfo object
+        HTTP status code: 200 OK (content is null if not found), 404 Not Found (request is null)
+
+        Gets Sources by filter (Search in Tag of the Source)
+        URI: /com/getsourcesbyfilter
+        Method: POST
+        Request: List<string> (Filters)
+        Response: List<ISourceInfo> object
+        HTTP status code: 200 OK, 404 Not Found (request is null)
+
+        Gets list of sources of one group (The result is included GroupId, GroupName and Group of Source properties: SourceId, IfMissing, Multiplier)
+        URI: /com/getgroupsources
+        Method: POST
+        Request: Group (Use only the Id)
+        Response: IGroupInfo object
+        HTTP status code: 200 OK (content is null not found Group)
+
+        Gets tags of all Sources
+        URI: /com/getallsourcestags
+        Method: GET
+        Response: List<string> object
+        HTTP status code: 200 OK
+
+
+        Gets list of quantities value of group
+        URI: /com/realtime/getgroupquantitiesvalues
+        Method: POST
+        Request: List<QuantityRequestItem>
+        Response: List<GroupQuantitiesValueItem>
+        HTTP status code: 200 OK (content is null if not found Sources), 404 Not Found (Request is null or empty)
+
+        Gets list of quantities value of Sources
+        URI: /com/realtime/getsourcequantitiesvalues
+        Method: POST
+        Request: List<QuantityRequestItem>
+        Response: List<QuantityValueItem>
+        HTTP status code: 200 OK (content is null if not found Sources), 404 Not Found (Request is null or empty)
+
+        *Writes quantity value of Source
+        URI: /com/realtime/writesourcequantityvalue
+        Method: POST
+        Request: IAuthorizedObject (SerializedObject property is ISourceQuantityWrite)
+        Response: QuantityWriteResult
+        HTTP status code: 200 OK, 401 Unauthorized (Username or Password is failed or user group hasn't control privilege (CanControl)), 404 Not Found (AuthorizedObj or SerializedObject is null)
+        
+        ** Gets Active alarms (Alarmgroups of user)
+        URI: /com/alarms/getactivealarms
+        Method: POST
+        Request: IActiveAlarms (Use only UserId.UserName and NumberOfItems parameters)
+        Response: IActiveAlarmResponse 
+        HTTP status code: 200 OK, 401 Unauthorized (Username is failed), 404 Not Found (Request is null)
+
+        Gets all of Active alarms statistic
+        URI: /com/alarms/getallactivealarmsstatistic
+        Method: GET
+        Response: AlarmList.AlarmsStatistic
+        HTTP status code: 200 OK
+
+        ** Gets Active alarms of Source (Alarmgroups of user)
+        URI: /com/alarms/getsourceactivealarms
+        Method: POST
+        Request: ISourceActiveAlarms (Use only UserId.UserName and SourceId parameters)
+        Response: IActiveAlarmResponse 
+        HTTP status code: 200 OK, 401 Unauthorized (Username is failed), 404 Not Found (Request is null)
+
+        ** Gets Filtered Active alarms (Search in tag of source)
+        URI: /com/alarms/getactivealarmsbyfilters
+        Method: POST
+        Request: IFilteredActiveAlarm (Use only UserId.UserName and Filters parameters)
+        Response: IActiveAlarmResponse 
+        HTTP status code: 200 OK, 401 Unauthorized (Username is failed), 404 Not Found (Request is null)
