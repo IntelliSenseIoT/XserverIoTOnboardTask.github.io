@@ -92,7 +92,6 @@ Xserver.Com manages real-time communication to the field devices (Modbus RTU, TC
         Response: List<string> object
         HTTP status code: 200 OK
 
-
         Gets list of quantities value of group
         URI: /com/realtime/getgroupquantitiesvalues
         Method: POST
