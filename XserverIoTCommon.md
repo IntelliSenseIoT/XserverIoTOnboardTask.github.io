@@ -33,7 +33,7 @@
 
 # RestAPI methods (for Data, Com, Core services):
 
-    Use Xserver.IoT.Connectivity.Interface class REST API methods.
+Use Xserver.IoT.Connectivity.Interface class REST API methods.
     
     public static async Task<IO.RestClient.RestClient.Result> RestClientGET(string RequestUri, ServiceName Service)
 
@@ -41,7 +41,7 @@
 
     public static async Task<IO.RestClient.RestClient.Result> RestClientPOSTAuthObj(string RequestUri, ServiceName Service, object SerializeObject)
  
-    More technical details are in the Xserver.IoT.Connectivity.Interface documentation.
+More technical details are in the Xserver.IoT.Connectivity.Interface documentation.
 
 # RestAPI methods for External services:
 
