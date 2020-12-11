@@ -142,7 +142,7 @@ Xserver.Com manages real-time communication to the field devices (Modbus RTU, TC
 
 ## Xserver.Data API reference:
 
-Xserver.Data service manages settings and forwards historical data to the cloud or SQL server.
+Xserver.Data service manages settings and forwards historical data to the Cloud or SQL server.
 
         Gets ServiceStatus object
         URI: /data/status
