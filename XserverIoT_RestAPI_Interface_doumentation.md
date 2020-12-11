@@ -20,7 +20,7 @@
 
 ## Xserver.Com API reference:
 
-Xserver.Com manages real-time communication to the field devices (Modbus RTU, TCP/IP and Device Extension IO, Watchdog, RTC, Time synchronize, etc.).
+Xserver.Com manages real-time communication to the field devices.
 
         Gets information about Xserver.Com service status.
         URI: /com/status
