@@ -16,7 +16,7 @@ More details about OnboardTask RESTAPI functions:
 
         var resultfromotherIoTServer = await XserverIoTConnectivityInterface.RestClientGET("/com/status", ServiceName.Com);
 
-        //The request to the local server
+        //The request back to the local server
         XserverIoTConnectivityInterface.LastIP = "localhost";
         XserverIoTConnectivityInterface.Reinitialize = true;
 
