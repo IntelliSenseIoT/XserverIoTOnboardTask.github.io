@@ -6,7 +6,7 @@ More details about OnboardTask REST API functions:
 
 [ - XserverIoTCommon class doumentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md)
 
-[REST API interface documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoT_RestAPI_Interface_doumentation.md)
+[ - REST API interface documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoT_RestAPI_Interface_doumentation.md)
 
 ## Code:
 
