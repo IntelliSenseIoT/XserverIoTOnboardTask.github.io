@@ -232,3 +232,21 @@ Xserver.Data service manages settings and forwards historical data to the Cloud 
         Method: GET
         Response: SystemDB.Model.ProjectInfo object
         HTTP status code: 200 OK, 404 Not Found (table is empty)
+
+## Xserver.Core API reference:
+
+Core service manages the system functions.
+
+        Gets information about Xserver.Core service status.
+        URI: /core/status
+        Method: GET
+        Response: ServiceStatus object
+        HTTP status code: 200 OK
+        
+        Ping command (The ping command helps determine TCP/IP networks IP address)
+        URI: /core/network/ping
+        Method: POST
+        Request: string object
+        Response: null
+        HTTP status code: 200 OK, 404 Not Found (Request is null or empty, command is not successful
+        
