@@ -146,7 +146,7 @@
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="XserverIoTCommon">
-      <Version>10.2.1</Version>
+      <Version>10.2.1.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
