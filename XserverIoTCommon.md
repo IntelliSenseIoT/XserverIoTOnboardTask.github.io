@@ -4,7 +4,7 @@
 
 # Required Xserver.IoT firmware:
 
-    Min version: 10.2
+    Min version: 10.2.1
 
 # Required UWP Capabilities:
 
@@ -140,3 +140,18 @@ Methods:
     /// Saves new ReportedProperties
     public static async Task<Result> SaveReportedProperties(List<DeviceTwinProperty> NewReportedProperties)
     
+# Blob storage methods:
+
+    /// Get BlobStorage connection info
+    public static async Task<ResultBlobStorage> GetConnectionInfo()
+
+# Services methods:
+
+    /// Gets Data service status
+    public static async Task<ResultStatus> DataIsInitialized()
+
+    /// Gets Com service status   
+    public static async Task<ResultStatus> ComIsInitialized()
+
+    /// Gets Core service status    
+    public static async Task<ResultStatus> CoreIsInitialized()
