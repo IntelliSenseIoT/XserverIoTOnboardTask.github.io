@@ -155,3 +155,8 @@ Methods:
 
     /// Gets Core service status    
     public static async Task<ResultStatus> CoreIsInitialized()
+
+# SQLInfo methods:
+
+    /// Get SQL server connection info
+    public static async Task<ResultSQL> GetConnectionInfo()
