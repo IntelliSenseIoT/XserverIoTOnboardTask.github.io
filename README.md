@@ -57,6 +57,5 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 [Example 10 - Access another IoT server from onboard task](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/10_Access_another_IoTServer_from_onboard_task.md)
 
-[Example 11 - Check the running of services (Data,Com,Core)]
-(https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/11_Check_Services_Status)
+[Example 11 - Check the running of services (Data,Com,Core)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/11_Check_Services_Status)
 
