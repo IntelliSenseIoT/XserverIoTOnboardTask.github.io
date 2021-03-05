@@ -5,11 +5,9 @@ After that We send the data of a water meter to the SQL database.
 
   ....
 
-  #region Helpers
   string SQLConStr;
   string PeriodTableName;
   SQL SQLlogger = new SQL();
-  #endregion
   
   public async void Run(IBackgroundTaskInstance taskInstance)
   {
