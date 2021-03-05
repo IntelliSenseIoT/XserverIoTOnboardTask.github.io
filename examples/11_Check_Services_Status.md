@@ -33,3 +33,4 @@ Example:
 
      EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
 }
+
