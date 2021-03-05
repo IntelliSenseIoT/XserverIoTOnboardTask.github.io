@@ -1,7 +1,7 @@
 # Example 12 - Logging SQL Server from OnboardTask
 
-In this example below, we log from Onboard to SQL Server. The first step is to query the SQL server connection parameters (previously set with IoT Explorer). 
-After that We send the data of a water meter to the SQL database.
+In this example below, we log from OnboardTask to SQL Server. The first step is to query the SQL server connection parameters (previously set with IoT Explorer). 
+After that We send the data of a water meter (in this example a virtual meter) to the SQL database.
 
   ....
 
