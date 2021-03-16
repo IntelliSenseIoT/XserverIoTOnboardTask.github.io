@@ -29,7 +29,7 @@
     AlarmRequest.IUserId = Authentication.GetComServiceUserId();
     AlarmRequest.NumberOfItems = 0; //No Limit
 
-    var resultackalarm = await RestAPI.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
+    var resultackalarm = await XserverIoTConnectivityInterface.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
 
 # RestAPI methods (for Data, Com, Core services):
 
