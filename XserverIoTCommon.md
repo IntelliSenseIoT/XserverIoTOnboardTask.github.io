@@ -81,6 +81,15 @@ Methods:
     //Gets SourceId and QuantityId (error return value null)
     public QuantityInfo GetIds(string SourceName, string QuantityName)
 
+    //Gets Source properties (if error or SourceId is missing return null)   
+    public async Task<Source> GetSourceProperties (Int16 SourceId)
+
+    //Gets TemplateDevice properties (if error or TemplateDeviceId is missing return null)    
+    public async Task<TemplateDevice> GetTemplateDeviceProperties(int TemplateDeviceId)
+
+    //Gets TemplateDevice quantities properties (if error or TemplateDeviceId is missing return null)    
+    public async Task<List<TemplateQuantity>> GetTemplateDeviceQuantitiesProperties(int TemplateDeviceId)
+
     //Gets value of the quantity of the Source (error return value null)
     public async Task<QuantityValueItem> GetValue(string SourceName, string QuantityName)
 
