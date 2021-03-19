@@ -1,4 +1,4 @@
-# Example 13 - Source, TemplateDevice, TemplateQuiantities properties
+# Example 13 - Source, TemplateDevice, TemplateQuantities properties
 
 The following properties can be queried from the OnboardTask application: 
   - Source
