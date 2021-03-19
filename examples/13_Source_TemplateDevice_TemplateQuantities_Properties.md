@@ -5,7 +5,45 @@ The following properties can be queried from the OnboardTask application:
   - TemplateDevice
   - TemplateDevice Quanities
 
-Example:
+## Object overview:
+
+     ┌─────────────────────────┐
+     │       Source 1          │
+     │                         │
+     │                         │
+     │                         │
+     │                         ├─────────┐
+     │                         │         │
+     └─────────────────────────┘         │
+                                         │
+     ┌─────────────────────────┐         │
+     │       Source 2          │         │
+     │                         │         │
+     │                         ├───────┐ │
+     │                         │       │ │
+     │                         │       │ │
+     │                         │      ┌┴─┴───────────────────┐
+     └─────────────────────────┘      │   Template Device 1  │
+                                      │                      │
+                                      │       defines        │
+                                      │   the device type    │
+                                      │ inherits templatedevi│
+                                      └─────────────┬────────┘
+                                                    │
+                                                    │
+                                                    │   ┌───────────────────────────┐
+                                                    │   │    Template Quaintities   │
+                                                    └───┤                           │
+                                                        │                           │
+                                                        │      Quantity 1           │
+                                                        │                           │
+                                                        │      Quantity 2           │
+                                                        │                           │
+                                                        │      ..                   │
+                                                        └───────────────────────────┘
+
+
+## Example:
 
     Realtime FieldDevices = new Realtime();
     
