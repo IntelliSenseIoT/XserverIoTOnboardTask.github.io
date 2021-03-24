@@ -3,6 +3,9 @@
 In this example below, we log from OnboardTask to SQL Server. The first step is to query the SQL server connection parameters (previously set with IoT Explorer). 
 After that We send the data of a water meter (in this example a virtual meter) to the SQL database.
 
+Add SQLTableInfo nuget package to your project.
+
+
     ....
 
     string SQLConStr;
