@@ -31,6 +31,17 @@
 
     var resultackalarm = await XserverIoTConnectivityInterface.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
 
+# Services methods:
+
+    /// Gets Data service status
+    public static async Task<ResultStatus> DataIsInitialized()
+
+    /// Gets Com service status   
+    public static async Task<ResultStatus> ComIsInitialized()
+
+    /// Gets Core service status    
+    public static async Task<ResultStatus> CoreIsInitialized()
+
 # ProjectInfo:
 
 Properties:
@@ -165,17 +176,6 @@ Methods:
 
     /// Get BlobStorage connection info
     public static async Task<ResultBlobStorage> GetConnectionInfo()
-
-# Services methods:
-
-    /// Gets Data service status
-    public static async Task<ResultStatus> DataIsInitialized()
-
-    /// Gets Com service status   
-    public static async Task<ResultStatus> ComIsInitialized()
-
-    /// Gets Core service status    
-    public static async Task<ResultStatus> CoreIsInitialized()
 
 # SQLInfo methods:
 
