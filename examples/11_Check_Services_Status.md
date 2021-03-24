@@ -8,7 +8,7 @@ After starting the IoT device, the first step is to check the service you want t
 
 Example:
 
-.....
+     .....
 
      public async void Run(IBackgroundTaskInstance taskInstance)
      {
