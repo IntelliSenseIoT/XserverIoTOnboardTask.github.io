@@ -12,6 +12,18 @@
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
+# ProjectInfo:
+
+Properties:
+
+    //Project Information (Project name, Namespace, IoT Device name, Installer company, Description, Creation & Modification date)
+    public static SystemDB.Model.ProjectInfo MyProject { get; internal set; } = new SystemDB.Model.ProjectInfo();
+
+Methods:
+
+    // Gets my project information  
+    public static async Task<Result> GetProjectInfo()
+
 # Authentication class:
 
     // Log in to Xserver.IoT
