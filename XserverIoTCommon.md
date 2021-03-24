@@ -12,18 +12,6 @@
     <Capability Name="internetClientServer"/>
     <Capability Name="privateNetworkClientServer"/>
 
-# ProjectInfo:
-
-Properties:
-
-    //Project Information (Project name, Namespace, IoT Device name, Installer company, Description, Creation & Modification date)
-    public static SystemDB.Model.ProjectInfo MyProject { get; internal set; } = new SystemDB.Model.ProjectInfo();
-
-Methods:
-
-    // Gets my project information  
-    public static async Task<Result> GetProjectInfo()
-
 # Authentication class:
 
     // Log in to Xserver.IoT
@@ -42,6 +30,18 @@ Methods:
     AlarmRequest.NumberOfItems = 0; //No Limit
 
     var resultackalarm = await XserverIoTConnectivityInterface.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
+
+# ProjectInfo:
+
+Properties:
+
+    //Project Information (Project name, Namespace, IoT Device name, Installer company, Description, Creation & Modification date)
+    public static SystemDB.Model.ProjectInfo MyProject { get; internal set; } = new SystemDB.Model.ProjectInfo();
+
+Methods:
+
+    // Gets my project information  
+    public static async Task<Result> GetProjectInfo()
 
 # RestAPI methods (for Data, Com, Core services):
 
