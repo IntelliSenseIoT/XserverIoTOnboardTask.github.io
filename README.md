@@ -59,6 +59,6 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 [Example 11 - Check the running of services (Data,Com,Core)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/11_Check_Services_Status.md)
 
-[Example 12 - Logging SQL Server from OnboardTask](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/12%20Logging%20SQL%20Server%20from%20OnobardTask.md)
+[Example 12 - Logging to SQL Server from OnboardTask](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/12%20Logging%20SQL%20Server%20from%20OnobardTask.md)
 
 [Example 13 - Source, TemplateDevice, TemplateQuantities properties](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/13_Source_TemplateDevice_TemplateQuantities_Properties.md)
