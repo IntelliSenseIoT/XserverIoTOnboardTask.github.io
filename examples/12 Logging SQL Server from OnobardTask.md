@@ -9,6 +9,7 @@ Code:
 
     ....
 
+    SQLTableInfo.PeriodData Period = new SQLTableInfo.PeriodData();
     string SQLConStr;
     string PeriodTableName;
     SQL SQLlogger = new SQL();
