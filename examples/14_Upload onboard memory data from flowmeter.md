@@ -1,13 +1,13 @@
-# Example 14 - Upload onboard data from flow meter
+# Example 14 - Upload onboard data from flow meter and Log to SQL database
 
-The following example describes how to upload data from the onboard memory of an flow meter:
+### The following example describes how to upload data from the onboard memory of an flow meter:
 
   - Upload historical data to the IoT server with onboardtask
   - Historical data log to SQL Server PeriodLog table
   - If the SQL server is not available, the data is stored in the onboard storage of the IoT Server
   - When the SQL server is reconnected, the data is uploaded from the onboard storage to the SQL server.
 
-Prerequisites:
+### Prerequisites:
 
   - Installed SQL Server 2019 Express (Create empty IoT Server database)
   - IoT Server connects to Flow meter on RS485 serial cable
