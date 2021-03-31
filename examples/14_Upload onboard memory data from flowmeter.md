@@ -29,7 +29,7 @@ Prerequisites:
 
     namespace XServerIoTOnboardTaskProject
     {
-        //Project: Uniflow onboard data reader
+        //Project: Flow onboard data reader & uploader
         public sealed class StartupTask : IBackgroundTask
         {
             #region XServerIoTOnboardTask service settings
