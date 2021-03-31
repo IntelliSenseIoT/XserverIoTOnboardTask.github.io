@@ -29,7 +29,30 @@
     AlarmRequest.IUserId = Authentication.GetComServiceUserId();
     AlarmRequest.NumberOfItems = 0; //No Limit
 
-    var resultackalarm = await RestAPI.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
+    var resultackalarm = await XserverIoTConnectivityInterface.RestClientPOST("/com/alarms/getactivealarms", ServiceName.Com, AlarmRequest);
+
+# Services methods:
+
+    /// Gets Data service status
+    public static async Task<ResultStatus> DataIsInitialized()
+
+    /// Gets Com service status   
+    public static async Task<ResultStatus> ComIsInitialized()
+
+    /// Gets Core service status    
+    public static async Task<ResultStatus> CoreIsInitialized()
+
+# ProjectInfo:
+
+Properties:
+
+    //Project Information (Project name, Namespace, IoT Device name, Installer company, Description, Creation & Modification date)
+    public static SystemDB.Model.ProjectInfo MyProject { get; internal set; } = new SystemDB.Model.ProjectInfo();
+
+Methods:
+
+    // Gets my project information  
+    public static async Task<Result> GetProjectInfo()
 
 # RestAPI methods (for Data, Com, Core services):
 
@@ -80,6 +103,15 @@ Methods:
 
     //Gets SourceId and QuantityId (error return value null)
     public QuantityInfo GetIds(string SourceName, string QuantityName)
+
+    //Gets Source properties (if error or SourceId is missing return null)   
+    public async Task<Source> GetSourceProperties (Int16 SourceId)
+
+    //Gets TemplateDevice properties (if error or TemplateDeviceId is missing return null)    
+    public async Task<TemplateDevice> GetTemplateDeviceProperties(int TemplateDeviceId)
+
+    //Gets TemplateDevice quantities properties (if error or TemplateDeviceId is missing return null)    
+    public async Task<List<TemplateQuantity>> GetTemplateDeviceQuantitiesProperties(int TemplateDeviceId)
 
     //Gets value of the quantity of the Source (error return value null)
     public async Task<QuantityValueItem> GetValue(string SourceName, string QuantityName)
@@ -144,17 +176,6 @@ Methods:
 
     /// Get BlobStorage connection info
     public static async Task<ResultBlobStorage> GetConnectionInfo()
-
-# Services methods:
-
-    /// Gets Data service status
-    public static async Task<ResultStatus> DataIsInitialized()
-
-    /// Gets Com service status   
-    public static async Task<ResultStatus> ComIsInitialized()
-
-    /// Gets Core service status    
-    public static async Task<ResultStatus> CoreIsInitialized()
 
 # SQLInfo methods:
 
