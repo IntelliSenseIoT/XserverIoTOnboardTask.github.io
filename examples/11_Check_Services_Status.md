@@ -2,9 +2,9 @@
 
 After starting the IoT device, the first step is to check the service you want to access. 
 
-  var com = await Services.ComIsInitialized();
-  var data = await Services.DataIsInitialized();
-  var core = await Services.CoreIsInitialized();
+    var com = await Services.ComIsInitialized();
+    var data = await Services.DataIsInitialized();
+    var core = await Services.CoreIsInitialized();
 
 Example:
 
