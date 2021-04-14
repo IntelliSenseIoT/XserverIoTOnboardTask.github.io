@@ -13,7 +13,8 @@
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
 
 - More details: https://www.intellisense-iot.com/
-- [Technical overview about IoT Server](https://www.intellisense-iot.com/xserver-iot-product)        
+- [Technical overview about IoT Server](https://www.intellisense-iot.com/xserver-iot-product) 
+- [Open an OnboardTask project from GitHub repo in Visual Studio](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Open%20an%20OnboardTask%20project%20from%20GitHub%20repo.md)
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
