@@ -15,7 +15,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - More details: https://www.intellisense-iot.com/
 - [Technical overview about IoT Server](https://www.intellisense-iot.com/xserver-iot-product) 
 - [Open an OnboardTask project from GitHub repo in Visual Studio](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Open%20an%20OnboardTask%20project%20from%20GitHub%20repo.md)
-- [Debug OnboardTask apps on IoT Server from Visual Studio](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Debug%20OnboardTask%20apps%20on%20IoT%20Server%20from%20Visual%20Studio.md)
+- [Debug OnboardTask app on an IoT Server from Visual Studio](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Debug%20OnboardTask%20apps%20on%20IoT%20Server%20from%20Visual%20Studio.md)
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
