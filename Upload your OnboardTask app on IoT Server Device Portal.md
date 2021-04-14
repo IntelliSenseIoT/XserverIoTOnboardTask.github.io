@@ -4,6 +4,8 @@
 
 ![](images/OpenDevicePortal1.png)
 
+Default Username and Password: Poweruser,IoTServer1234
+
 ![](images/DP1.png)
 
 ![](images/DP2.png)
@@ -11,5 +13,3 @@
 ![](images/DP3.png)
 
 ![](images/DP4.png)
-
-[Microsoft Tutorial: Debug UWP apps on remote machines from Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2019)
