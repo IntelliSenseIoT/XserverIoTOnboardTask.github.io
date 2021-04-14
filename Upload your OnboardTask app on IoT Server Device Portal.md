@@ -1,4 +1,4 @@
-#Upload your OnboardTask app on IoT Server Device Portal
+# Upload your OnboardTask app on IoT Server Device Portal
 
 1) Open and Login to IoT Server with IoT Explorer
 
