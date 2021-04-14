@@ -1,4 +1,4 @@
-# Debug OnboardTask apps on an IoT Server from Visual Studio
+# Debug OnboardTask app on an IoT Server from Visual Studio
 
 You can use Visual Studio to run, debug, profile, and test a OnboardTask app on IoT device.
 
