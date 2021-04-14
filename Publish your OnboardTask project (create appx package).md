@@ -12,4 +12,4 @@
 
 ![](images/VS13.png)
 
-[Microsoft Tutorial: Package a desktop or UWP app in Visual Studio](ttps://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps)
+[Microsoft Tutorial: Package a desktop or UWP app in Visual Studio](https://docs.microsoft.com/en-us/windows/msix/package/packaging-uwp-apps)
