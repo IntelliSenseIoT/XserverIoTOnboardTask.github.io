@@ -40,7 +40,7 @@ In the code below, the tasks required for the first run are performed.
 ### External RESTAPI Calls
 
 We can make our own RESTAPI interface that external applications can call. GET and POST calls are supported.
-This RESTAPI interface is used by the DATA service also, which invokes certain events. 
+This RESTAPI interface is used by the DATA service also, which invokes certain events ([for example: Desired properties change callback](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/6_Device_Twin_Desired_Change_Callback.md)). 
     
     private async void HttpRestServer_ClientRequestEvent(object sender, HttpRestServerService.ClientRequestEventArgs e)
     {
