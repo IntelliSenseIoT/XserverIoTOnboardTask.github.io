@@ -12,9 +12,9 @@
     //Periodic run time of the onboardtask method (ms)
     private const int TaskHandlerPeriod = 1000;
  
- ### First Run
+### First Run
  
-    In the code below, the tasks required for the first run are performed.
+In the code below, the tasks required for the first run are performed.
     
     public async void Run(IBackgroundTaskInstance taskInstance)
     {
@@ -39,8 +39,8 @@
 
 ### External RESTAPI Calls
 
-    We can make our own RESTAPI interface that external applications can call. GET and POST calls are supported.
-    This RESTAPI interface is used by the DATA service also, which invokes certain events. 
+We can make our own RESTAPI interface that external applications can call. GET and POST calls are supported.
+This RESTAPI interface is used by the DATA service also, which invokes certain events. 
     
     private async void HttpRestServer_ClientRequestEvent(object sender, HttpRestServerService.ClientRequestEventArgs e)
     {
