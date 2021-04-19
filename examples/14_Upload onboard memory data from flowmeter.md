@@ -619,12 +619,35 @@ In the example below, we upload data (hourly, 8 hours, daily, monthly) from a Mo
         }
     }
   
-## highlighted parts:
+## Highlighted parts:
 
 ### Gets ProjectInfo of the IOT Server:
 
-** var projres = await ProjectInfo.GetProjectInfo();
-** Namespace = ProjectInfo.MyProject.Namespace;
+    var projres = await ProjectInfo.GetProjectInfo();
+    Namespace = ProjectInfo.MyProject.Namespace;
     
+### Time calculation methods:
+
+    //Returns a value specifying the number of time intervals between two Date values (Diff = d2 - d1)    
+    public long DateDiff(DateInterval Interval, DateTime Date1, DateTime Date2)
+    
+    //Calculate next log time   
+    public DateTime nextLogTimeUTCOfQuantity(DateTime referenceDateTimeUTC, int density, LogInterval LogInterval = LogInterval.Minute)
+
+Example:
+
+    Minute:
+
+    TimeCalculation Tcalc = new TimeCalculation();
+    DateTime dref = new DateTime(2019, 3, 1, 0, 0, 0);
+    var res = Tcalc.nextLogTimeUTCOfQuantity(dref, 15);
+    //Result = 2019, 3, 1, 0, 15, 0
+
+    Second:
+
+    TimeCalculation Tcalc = new TimeCalculation();
+    DateTime dref = new DateTime(2019, 3, 1, 1, 0, 0);
+    var res = Tcalc.nextLogTimeUTCOfQuantity(dref, 5,LogInterval.Second);
+    //Result = 2019, 3, 1, 0, 0, 5
 
 
