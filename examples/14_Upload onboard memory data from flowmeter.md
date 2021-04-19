@@ -618,4 +618,13 @@ In the example below, we upload data (hourly, 8 hours, daily, monthly) from a Mo
             #endregion
         }
     }
+  
+## highlighted parts:
+
+### Gets ProjectInfo of the IOT Server:
+
+** var projres = await ProjectInfo.GetProjectInfo();
+** Namespace = ProjectInfo.MyProject.Namespace;
+    
+
 
