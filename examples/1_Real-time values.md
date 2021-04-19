@@ -1,6 +1,6 @@
 ## Example 1 (Real-time - Access Sources and Quantites):
 
-From OnboardTask supports to read and write the Quantites vaules of Sources with realtime methods of [XserverIoTCommon API](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md).
+From OnboardTask supports to read and write the Quantites values of Sources with realtime methods of [XserverIoTCommon API](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md).
 
 ![](images/RealTime.png)
 
