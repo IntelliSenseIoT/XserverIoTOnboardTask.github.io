@@ -14,13 +14,14 @@ More details about OnboardTask REST API functions:
         ....
        
         //The request is redirected to the other IoT server
-        XserverIoTConnectivityInterface.LastIP = "10.29.2.12";
-        XserverIoTConnectivityInterface.Reinitialize = true;
+        XserverIoTConnectivityInterface.LastIP = "10.29.2.12";  //Remote IoT Server IP address
+        XserverIoTConnectivityInterface.Reinitialize = true;  //Connection initialize
 
+        //GET request
         var resultfromotherIoTServer = await XserverIoTConnectivityInterface.RestClientGET("/com/status", ServiceName.Com);
 
         //The request back to the local server
-        XserverIoTConnectivityInterface.LastIP = "localhost";
+        XserverIoTConnectivityInterface.LastIP = "localhost";  //Go back to local IoT Server
         XserverIoTConnectivityInterface.Reinitialize = true;
 
         .......
