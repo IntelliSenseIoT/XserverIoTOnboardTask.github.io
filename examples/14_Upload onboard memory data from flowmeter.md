@@ -650,11 +650,12 @@ Example:
     var res = Tcalc.nextLogTimeUTCOfQuantity(dref, 5,LogInterval.Second);
     //Result = 2019, 3, 1, 0, 0, 5
 
-### Onboard Storage
+### Onboard Storage:
 
 You can store data in the Onboard storage, its size and number are not limited. The data is stored in string format. We can assign type and access to storage. 
 
-    //Create a new storage
+#### Create a new storage
+    
     IStorage newstorage = new IStorage();
 
     newstorage.Name = "File"+ DateTime.UtcNow.Ticks.ToString();  //Storage name
@@ -670,4 +671,34 @@ You can store data in the Onboard storage, its size and number are not limited. 
     {
     }
     
+#### Gets Storage
+    
+    IStorage sf = new IStorage();
+    
+    sf.DataType = "*"; //All types
 
+    //Send request list of storages
+    var result = await XserverIoTConnectivityInterface.RestClientPOSTAuthObj("/data/system/getstorageslistbydatatype", ServiceName.Data, sf);
+
+    if (result.Success == true)
+    {
+        var answer = JsonConvert.DeserializeObject<Models.Data.IResult>(result.ResultContent);
+        if (answer.Success == true)
+        {
+            //Gets list of storages
+            var storageslist = JsonConvert.DeserializeObject<List<IStorageInfo>>(answer.SerializedObject);
+           
+            //Get Storage Data
+            IStorage s = new IStorage();
+            s.Identify = Identify.Name;
+            s.Name = "Your Storage Name";
+
+            var results = await XserverIoTConnectivityInterface.RestClientPOSTAuthObj("/data/system/getstorage", ServiceName.Data, s);
+            var answers = JsonConvert.DeserializeObject<Models.Data.IResult>(results.ResultContent);
+            if (answers.Success == true)
+            {
+                var storage = JsonConvert.DeserializeObject<IStorage>(answers.SerializedObject);
+                //Data in string format is included in storage.Data 
+            }
+        }
+    }
