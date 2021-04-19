@@ -6,7 +6,9 @@ After starting the IoT device, the first step is to check the service you want t
     var data = await Services.DataIsInitialized();
     var core = await Services.CoreIsInitialized();
 
-Example:
+## Core example:
+
+In the example below, check that the Data and Com service is already available. 
 
      .....
 
