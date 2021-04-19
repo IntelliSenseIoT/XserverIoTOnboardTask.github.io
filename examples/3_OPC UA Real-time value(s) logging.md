@@ -1,4 +1,4 @@
-## Example 3 (OPC UA Real-time value(s) logging):
+## Example 3 - OPC UA Real-time value(s) logging with Template device usage:
 
 ### Create Virtual Device:
 
