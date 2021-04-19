@@ -1,6 +1,6 @@
 ## Example 2 (OPCUA communication):
 
-The IoT server is able to communicate with the OPCUA server using OnboardTask. 
+The IoT server is able to communicate with the OPCUA server (read and write values) using OnboardTask. 
 
 ### Prerequisites:
 
