@@ -1,4 +1,4 @@
-# Example 14 - Upload onboard data from flow meter and Log to SQL database
+# Example 14 - Upload from the onboard memory of the flow meter and Log to SQL database
 
 ### The following example shows how to upload data from the onboard memory of an flow meter:
 
