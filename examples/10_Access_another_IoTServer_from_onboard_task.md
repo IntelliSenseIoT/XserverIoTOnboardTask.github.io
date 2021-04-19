@@ -1,7 +1,6 @@
 # Example 10 - Access another IoT server from onboard task
 
-In this example below, we will connect to the services of another IoT server.
-
+In this example below, we connected to the services of another IoT server.
 
 More details about OnboardTask REST API functions: 
 
