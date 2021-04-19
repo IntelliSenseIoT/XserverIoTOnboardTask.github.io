@@ -1,4 +1,4 @@
-## Example 1 (Real-time):
+## Example 1 (Real-time - Access Sources and Quantites):
 
 FRom OnboardTask supports to read and write the Quantites of Sources with realtime methods of [XserverIoTCommon API](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md).
 
