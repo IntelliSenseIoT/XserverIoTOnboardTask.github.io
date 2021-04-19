@@ -1,5 +1,12 @@
 ## Example 3 - OPC UA Real-time value(s) logging with Template device usage:
 
+In the example below, we create a virtual device and use it to logging.
+
+### Prerequisites:
+
+  - OPCUA.Library from nuget.org
+  - Test OPCUA server (in example: OPC UA Simulator Server (www.prosysopc.com))
+
 ### Create Virtual Device:
 
 ![](images/DevExt1.png)
@@ -92,6 +99,7 @@
 
                     if (result.Success == true)
                     {
+                        //Logging quantities values
                         foreach (var item in result.OPCValues)
                         {
                             if (item.IsGood == true)
