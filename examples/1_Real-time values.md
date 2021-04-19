@@ -1,6 +1,6 @@
 ## Example 1 (Real-time):
 
-
+![](images/RealTime.png)
 
 ### Code:
 
