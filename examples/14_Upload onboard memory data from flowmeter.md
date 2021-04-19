@@ -15,7 +15,7 @@
   
 ## Example:
 
-In the example below, we upload data from a Modbus flow meter (connected to IoT Server with RS485) and log the data to an SQL server (we gets from connection string from IoT Explorer settings). If the connection to the SQL server is lost, the data is temporarily stored in the Onboard storage.
+In the example below, we upload data (hourly,8 hours, daily, monthly) from a Modbus flow meter (connected to IoT Server with RS485) and log the data to an SQL server (we gets from connection string from IoT Explorer settings). If the connection to the SQL server is lost, the data is temporarily stored in the Onboard storage.
 
     using File.Log;
     using Models.Com.Common;
