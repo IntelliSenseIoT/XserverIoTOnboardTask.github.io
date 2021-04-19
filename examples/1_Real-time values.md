@@ -1,6 +1,6 @@
 ## Example 1 (Real-time):
 
-![#f03c15]OnboardTask supports to read and write the Quantites of Sources with realtime methods of XserverIoTCommon API.
+- OnboardTask supports to read and write the Quantites of Sources with realtime methods of XserverIoTCommon API.
 
 ![](images/RealTime.png)
 
