@@ -650,4 +650,24 @@ Example:
     var res = Tcalc.nextLogTimeUTCOfQuantity(dref, 5,LogInterval.Second);
     //Result = 2019, 3, 1, 0, 0, 5
 
+### Onboard Storage
+
+You can store data in the Onboard storage, its size and number are not limited. The data is stored in string format. We can assign type and access to storage. 
+
+    //Create a new storage
+    IStorage newstorage = new IStorage();
+
+    newstorage.Name = "File"+ DateTime.UtcNow.Ticks.ToString();  //Storage name
+    newstorage.DataType = "Data";  //Storage type
+    newstorage.AccessType = Models.Data.TypeOfAccess.EveryBody; //Access rights
+    newstorage.Data = JsonConvert.SerializeObject(findres);  //Storage data serialized
+
+    var result = await XserverIoTConnectivityInterface.RestClientPOSTAuthObj("/data/system/addstorage", ServiceName.Data, newstorage);
+    if (result.Success == true)
+    {
+    }
+    else
+    {
+    }
+    
 
