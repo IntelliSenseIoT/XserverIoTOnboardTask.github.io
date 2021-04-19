@@ -20,6 +20,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [Publish your OnboardTask project (create appx package)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Publish%20your%20OnboardTask%20project%20(create%20appx%20package).md)
 - [Upload your OnboardTask app to IoT Server on the IoT Server Device Portal](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Upload%20your%20OnboardTask%20app%20on%20IoT%20Server%20Device%20Portal.md)
 - [Upload your OnboardTask app to IoT Server via Azure](https://www.youtube.com/watch?v=odZtoA1Ns0Q&t=5s)
+- [XserverIoTCommon API description](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md)
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
