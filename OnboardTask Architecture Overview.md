@@ -1,5 +1,7 @@
 # OnboardTask Architecture Overview
 
+![](images/OnboardTask.png)
+
 ![](images/OT1.png)
 
 ## More details:
