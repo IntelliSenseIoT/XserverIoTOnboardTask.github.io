@@ -1,5 +1,7 @@
 ## Example 4 - Onboard Task and Azure Direct Method
 
+In the example below, we use the Azure direct method to send a parameter to OnboardTask.
+
 ### Add new IoT Device to IoT Explorer:
 
 ![](images/Setcloudconnection.png)
