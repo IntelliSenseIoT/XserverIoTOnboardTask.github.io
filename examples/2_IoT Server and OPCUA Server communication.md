@@ -1,4 +1,4 @@
-## Example 2 (OPCUA communication):
+## Example 2 - OPCUA server communication:
 
 The IoT server is able to communicate with the OPCUA server (read and write values) using OnboardTask. 
 
