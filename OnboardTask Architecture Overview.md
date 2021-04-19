@@ -1,10 +1,10 @@
 # OnboardTask Architecture Overview
 
-Interfaces:
+## Interfaces:
 
 ![](images/OnboardTask.png)
 
-Code:
+## Code:
 
 ![](images/OT1.png)
 
