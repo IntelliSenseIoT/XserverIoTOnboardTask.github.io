@@ -1,6 +1,6 @@
 ## Example 1 (Real-time):
 
-- OnboardTask supports to read and write the Quantites of Sources with realtime methods of XserverIoTCommon API.
+FRom OnboardTask supports to read and write the Quantites of Sources with realtime methods of XserverIoTCommon API.
 
 ![](images/RealTime.png)
 
@@ -64,7 +64,7 @@
 
                 if (Light.Value >0 && Status.Value !=1)
                 {
-                    //Write values
+                    //Writes values
                     var writeresult = await RObj.WriteValue("Compressor", "Valve - Status", 1);
                 }
             }
