@@ -1,4 +1,4 @@
-# Example 6 - Desired properties change callback 
+# Example 6 - Device twin Desired properties change callback 
 
 In the example below, if the Desired properties change in the Cloud, we get an event from there in the OnboardTask.
 
