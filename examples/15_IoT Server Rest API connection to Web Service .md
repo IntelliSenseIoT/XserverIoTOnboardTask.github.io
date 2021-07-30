@@ -6,6 +6,8 @@
 
   - IoT Server connects to one meter on RS485 serial or TCP/IP connection
   - Configure IoT Server with IoT Explorer
+    - Add one Test Meter (name: Test Meter1)
+    - Create Onboard Task user group and add onboardtask user 
 
 ![](images/TestMeter.png)
   
