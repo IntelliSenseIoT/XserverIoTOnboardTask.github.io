@@ -53,7 +53,7 @@ The following example shows how to send data from Power Meter with IoT Server to
             #region Initialize RestClient to Website
             RestAPIClient.Username = "YourUsername";
             RestAPIClient.Password = "YourPassword";
-            RestAPIClient.uriString = "http://10.29.2.200/";
+            RestAPIClient.uriString = "http://<your web service uri>/";
             RestAPIClient.RestClientInitialize();
             #endregion
 
