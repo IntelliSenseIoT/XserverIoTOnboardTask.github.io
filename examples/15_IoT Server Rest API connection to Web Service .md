@@ -1,5 +1,7 @@
 # Example 15 - IoT Server Rest API connection to Web Service
 
+![](images/Topology.png)
+
 ### The following example shows how to upload data from the onboard memory of an flow meter:
 
   - Upload historical data to the IoT server with onboardtask
