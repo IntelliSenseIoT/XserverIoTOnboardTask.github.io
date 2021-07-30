@@ -13,7 +13,7 @@
 
 The following example shows how to send data from Power Meter with IoT Server to Web service
 
-## Code
+## Code:
 
         #region XServerIoTOnboardTask service settings
         .....
