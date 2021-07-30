@@ -7,7 +7,7 @@
   - IoT Server connects to one meter on RS485 serial or TCP/IP connection
   - Configure IoT Server with IoT Explorer
 
-![](images/TeseMeter.png)
+![](images/TestMeter.png)
   
 ## Example:
 
