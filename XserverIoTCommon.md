@@ -181,3 +181,8 @@ Methods:
 
     /// Get SQL server connection info
     public static async Task<ResultSQL> GetConnectionInfo()
+
+# Serial Port methods:
+
+    /// Gets Serial Port settings  
+    public static async Task<ResultSerialPortSettings> GetSettings()
