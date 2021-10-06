@@ -1,6 +1,13 @@
-## Example 2 (OPCUA communication):
+## Example 2 - OPCUA server communication:
 
-Test OPCUA server in example: OPC UA Simulator Server (www.prosysopc.com)
+The IoT server is able to communicate with the OPCUA server (read and write values) using OnboardTask. 
+
+### Prerequisites:
+
+  - OPCUA.Library from nuget.org
+  - Test OPCUA server (in example: OPC UA Simulator Server (www.prosysopc.com))
+
+### Code:
     
         //First step add OPCUA.Library nuget to your project
 

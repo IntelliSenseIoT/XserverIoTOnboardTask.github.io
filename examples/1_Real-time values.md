@@ -1,4 +1,10 @@
-## Example 1 (Real-time):
+## Example 1 (Real-time - Access Sources and Quantites):
+
+From OnboardTask supports to read and write the Quantites values of Sources with realtime methods of [XserverIoTCommon API](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md).
+
+![](images/RealTime.png)
+
+### Code:
 
         #region Helpers
         //.....
@@ -51,14 +57,14 @@
         {
             try
             {
-                //Todo: Type your onboard task code here
-
+                //Reads values
                 var Light = await RObj.GetValue("Compressor", "Run");
 
                 var Status =await  RObj.GetValue("Compressor", "Valve - Status");
 
                 if (Light.Value >0 && Status.Value !=1)
                 {
+                    //Writes values
                     var writeresult = await RObj.WriteValue("Compressor", "Valve - Status", 1);
                 }
             }
