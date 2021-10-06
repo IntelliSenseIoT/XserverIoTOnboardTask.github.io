@@ -22,7 +22,7 @@
     </PackageCertificateKeyFile>
     <AppxPackage>true</AppxPackage>
     <ContainsStartupTask>true</ContainsStartupTask>
-    <PackageCertificateThumbprint>4F6C34EB7A344BF018D233FDF554E9F4D99D1D17</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>EFC5BC76B4B97A8C29A75285A52F4E4ABE276E44</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
@@ -143,10 +143,10 @@
       <Version>6.2.12</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
+      <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="XserverIoTCommon">
-      <Version>10.2.1.5</Version>
+      <Version>10.2.3.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
