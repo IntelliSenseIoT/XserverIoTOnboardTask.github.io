@@ -1,4 +1,4 @@
-# Example 16 - Custom Serial communication (RS485)
+# Example 16 - Custom serial communication ( on RS485)
 
 ### Prerequisites:
 
