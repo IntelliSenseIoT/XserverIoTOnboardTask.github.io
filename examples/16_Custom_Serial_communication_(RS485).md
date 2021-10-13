@@ -2,28 +2,36 @@
 
 ### Prerequisites:
 
+  - Required Xserver.IoT firmware: 10.2.3
   - IoT Server connects to one serial device on RS485
   - Configure IoT Server with IoT Explorer
-    - Create Onboard Task user group and add onboardtask user 
 
 ![](images/TestMeter.png)
   
 ## Example:
 
-The following example shows how to send data from Power Meter with IoT Server to Web service
+The following example shows how to send custom message (or protocol) on RS485 interface
 
 ## Code:
 
-        #region XServerIoTOnboardTask service settings
-        .....
-        //Task Handler Period (ms)
-        private const int TaskHandlerPeriod = 60000;  //1 Minute
-        #endregion
+....
+using Driver.Device;
+using Driver.Device.Interface;
+using System.Threading.Tasks;
+using SystemDB.Model;
+using System.Diagnostics;
+
+        ....
 
         #region Helpers
         ....
-        Realtime RObj = new Realtime();
-        XserverIoTCommon.RestClient RestAPIClient = new XserverIoTCommon.RestClient();
+        //Serial port hardware Id
+        private const string SerialPortDeviceId = @"\\?\ACPI#BCM2836#0#{86e0d1e0-8089-11d0-9ce4-08003e301f73}";
+        ResultSerialPortSettings SerialSettings = new ResultSerialPortSettings();
+        Extension DeviceExt = new Extension();
+        //Information about serial communication
+        bool ReceivedAnswer;
+        bool NotReceived;
         #endregion
 
         ....
@@ -33,28 +41,10 @@ The following example shows how to send data from Power Meter with IoT Server to
           
             ....
 
-            #region Login to Xserver.IoT Service
-            var res = await Authentication.Login("onboardtask", "onboardtask");
-            if (res.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + res.ErrorMessage);
-            }
-            #endregion
-
-            #region Gets List of Sources and Quantities
-            var result = await RObj.GetSourcesQuantities();
-            if (result.Success == false)
-            {
-                EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + result.ErrorMessage);
-            }
-            #endregion
-
-            #region Initialize RestClient to Website
-            RestAPIClient.Username = "YourUsername";
-            RestAPIClient.Password = "YourPassword";
-            RestAPIClient.uriString = "http://<your web service uri>/";
-            RestAPIClient.RestClientInitialize();
-            #endregion
+            //Serial Port Initialize
+            SerialSettings = await SerialPort.GetSettings();
+            var res = await SerialPortInitialize();
+            DeviceExt.SlaveRequestEvent += DeviceExt_ClientRequestEvent;
 
             .....
         }
@@ -68,30 +58,38 @@ The following example shows how to send data from Power Meter with IoT Server to
         {
             try
             {
-                var RealtimeMeterValue = await RObj.GetValue("Test Meter1", "Active Power");
+                NotReceived = false;
+                ReceivedAnswer = false;
 
-                if (RealtimeMeterValue.Quality != Models.Com.Common.Quality.None)
+                Stopwatch stopWatch = new Stopwatch();
+
+                byte[] message = {1,3,0,0,0,2,196,11};  //Your Message
+                var res = await DeviceExt.SendComMessage(message, SerialPortDeviceId);  //Send serial message
+
+                if (res.Success == true)
                 {
-                    List<MeterData> MetersData = new List<MeterData>();
+                    stopWatch.Reset();
+                    stopWatch.Start();
 
-                    MeterData OneMeterData = new MeterData();
-                    OneMeterData.SourceName = RealtimeMeterValue.SourceName;
-                    OneMeterData.QuantityName = RealtimeMeterValue.QuantityName;
-                    OneMeterData.Unit = RealtimeMeterValue.Unit;
-                    OneMeterData.Value = RealtimeMeterValue.Value;
-                    OneMeterData.TimestampLT = RealtimeMeterValue.TimestampLT;
-
-                    MetersData.Add(OneMeterData);
-
-                    var result = await RestAPIClient.RestClientPOST("/meter", MetersData);
-                    if (result.Success == true)
+                    while (stopWatch.Elapsed.TotalMilliseconds < SerialSettings.SerialTimeOut && ReceivedAnswer == false)
                     {
-                        //Sent OK
+                        await Task.Delay(5);
+                    }
+                    stopWatch.Stop();
+
+                    if (ReceivedAnswer)
+                    {
+                        
                     }
                     else
                     {
-                        EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + "REST API request: /meter - Error: " + result.ErrorMessage);
+                        NotReceived = true;
+                       
                     }
+                }
+                else
+                {
+                    NotReceived = true;
                 }
             }
             catch (Exception ex)
@@ -101,13 +99,145 @@ The following example shows how to send data from Power Meter with IoT Server to
             OnboardTaskHandler.Run();  //Task continues to run
         }
 
-        #region RestAPI objects
-        private class MeterData
+        ....
+        
+        //Initialize RS485 Serial Port
+        private async Task<bool> SerialPortInitialize(bool reinitialize = false)
         {
-            public string SourceName { get; set; }
-            public string QuantityName { get; set; }
-            public string Unit { get; set; }
-            public double Value { get; set; }
-            public DateTime TimestampLT { get; set; }
+            bool result = false;
+
+            try
+            {
+                CommonFunctions.ComPortSettings findcom = null;
+
+                if (reinitialize == true)
+                {
+                    //Dispose objects
+                    try
+                    {
+                        DeviceExt.Dispose();
+                    }
+                    catch (Exception)
+                    {
+                        //Object disposed
+                    }
+                    DeviceExt = null;
+
+                    await Task.Delay(5000);
+                    //Recrate objects
+                    DeviceExt = new Extension();
+
+                    int t = 0;
+                    while (t < 10 && findcom == null)
+                    {
+                        try
+                        {
+                            findcom = DeviceExt.GetComPortSettings(SerialPortDeviceId);
+                        }
+                        catch (Exception)
+                        {
+                            //Error
+                        }
+
+                        if (findcom == null)
+                        {
+                            await Task.Delay(15000);
+                        }
+                        t = +1;
+                    }
+                }
+                else
+                {
+                    findcom = DeviceExt.GetComPortSettings(SerialPortDeviceId);
+                }
+
+                if (findcom != null)
+                {
+                    var portopen = findcom.PortOpen;
+                    if (portopen == true)
+                    {
+                        var res = DeviceExt.CloseComPort(SerialPortDeviceId);
+                        if (res.Success == false)
+                        {
+                            EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + "It is not able to close serial port! " + res.ErrorMessage);
+                        }
+                        else
+                        {
+                            portopen = false;
+                        }
+                    }
+                    if (portopen == false)
+                    {
+                        if (SerialSettings.SerialBaudRate == SerialBaudRate.BR_9600)
+                        {
+                            findcom.BaudRate = Driver.Device.Interface.CommonFunctions.SerialBaudRate.BR_9600;
+                        }
+                        else if (SerialSettings.SerialBaudRate == SerialBaudRate.BR_19200)
+                        {
+                            findcom.BaudRate = Driver.Device.Interface.CommonFunctions.SerialBaudRate.BR_19200;
+                        }
+                        else
+                        {
+                            findcom.BaudRate = Driver.Device.Interface.CommonFunctions.SerialBaudRate.BR_38400;
+                        }
+
+                        if (SerialSettings.SerialParity == SerialParity.Even)
+                        {
+                            findcom.Parity = Driver.Device.Interface.CommonFunctions.SerialParity.Even;
+                        }
+                        else if (SerialSettings.SerialParity == SerialParity.Odd)
+                        {
+                            findcom.Parity = Driver.Device.Interface.CommonFunctions.SerialParity.Odd;
+                        }
+                        else
+                        {
+                            findcom.Parity = Driver.Device.Interface.CommonFunctions.SerialParity.None;
+                        }
+
+                        findcom.ReadTimeout = 20;
+                        findcom.WriteTimeout = 20;
+
+                        var res = await DeviceExt.OpenComPort(SerialPortDeviceId);
+                        if (res.Success == false)
+                        {
+                            EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Serial port configuration error! " + res.ErrorMessage);
+                        }
+                        else
+                        {
+                            result = true;
+                            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Serial port configuration success.");
+                        }
+                    }
+                }
+                else
+                {
+                    EventLogging.AddLogMessage(MessageType.Error, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Can't find serial port!");
+                }
+            }
+            catch (Exception ex)
+            {
+                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Serial port configuration exception error! " + ex.Message);
+            }
+
+            return result;
         }
-        #endregion
+
+        //Serial answer
+        private void DeviceExt_ClientRequestEvent(object sender, CommonFunctions.SlaveRequestEventArgs e)   
+        {
+            if (NotReceived == false)
+            {
+                ReceivedAnswer = true;
+                var result = "ClientRequestEvent: " + e.Success.ToString() + " " + e.DeviceId.ToString();
+
+                string received = "";
+
+                for (int i = 0; i < e.ReadBytes.Length - 1; i++)
+                {
+                    received += " " + e.ReadBytes[i].ToString();
+                }
+
+                var Answer = received;
+            }
+        }
+        
