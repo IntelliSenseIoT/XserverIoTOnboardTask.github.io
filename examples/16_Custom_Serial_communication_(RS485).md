@@ -6,7 +6,7 @@
   - IoT Server connects to one serial device on RS485
   - Configure IoT Server with IoT Explorer
 
-### 1) Set Serial port configuration:
+### 1) Set serial port configuration:
 
 ![](images/SerialSettings.png)
 
