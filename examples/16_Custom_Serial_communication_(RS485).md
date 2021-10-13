@@ -6,7 +6,7 @@
   - IoT Server connects to one serial device on RS485
   - Configure IoT Server with IoT Explorer
 
-### 1) Set serial port configuration:
+### 1) Set serial port configuration
 
 ![](images/SerialSettings.png)
 
@@ -28,12 +28,12 @@ The following example shows how to send custom message (or protocol) on RS485 in
 
 ## Code:
 
-....
-using Driver.Device;
-using Driver.Device.Interface;
-using System.Threading.Tasks;
-using SystemDB.Model;
-using System.Diagnostics;
+    ....
+    using Driver.Device;
+    using Driver.Device.Interface;
+    using System.Threading.Tasks;
+    using SystemDB.Model;
+    using System.Diagnostics;
 
         ....
 
