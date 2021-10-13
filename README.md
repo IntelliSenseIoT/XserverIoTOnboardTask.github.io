@@ -75,4 +75,4 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 [Example 15 - IoT Server Rest API connection to Web Service](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/15_IoT%20Server%20Rest%20API%20connection%20to%20Web%20Service%20.md)
 
-[Example 16 - IoT Server Rest API connection to Web Service](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/16_Custom_Serial_communication_(RS485).md)
+[Example 16 - Custom serial communication (on RS485)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/16_Custom_Serial_communication_(RS485).md)
