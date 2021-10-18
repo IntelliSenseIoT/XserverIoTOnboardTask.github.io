@@ -8,11 +8,11 @@
 
 ## Communication specifications
 
-  LAN side protocol: TCP / IP or UDP / IP (depending on Xport setting)
-  Specify by IP address (***. ***. ***. ***)
-  Local port number: 10001
-  Remote port number: 10002
-  ‑> Put the command in an IP packet and perform LAN communication.
+    LAN side protocol: TCP / IP or UDP / IP (depending on Xport setting)
+    Specify by IP address (***. ***. ***. ***)
+    Local port number: 10001
+    Remote port number: 10002
+    ‑> Put the command in an IP packet and perform LAN communication.
 
 ## Example:
 
