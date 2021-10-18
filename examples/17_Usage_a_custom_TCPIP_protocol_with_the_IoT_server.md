@@ -13,6 +13,8 @@
     Local port number: 10001
     Remote port number: 10002
     ‑> Put the command in an IP packet and perform LAN communication.
+    
+    ![](images/Command format.png)
 
 ## Example:
 
