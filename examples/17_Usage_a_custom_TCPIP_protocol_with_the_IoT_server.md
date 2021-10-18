@@ -51,7 +51,7 @@ The following example shows how to send custom TCP/IP message (or protocol) on E
                     0xFA,       // SUM value (lower 8 bits when adding data up to the previous time)
                     0x03};      // 03H:ETX(Separator)
 
-                var result = await TCPClient.SendClientRequest("10.29.2.126", "8007", SendMessage);
+                var result = await TCPClient.SendClientRequest("192.168.2.126", "10002", SendMessage);
 
                 var answer = result.ReadBytes; 
             }
