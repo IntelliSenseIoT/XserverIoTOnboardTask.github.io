@@ -15,8 +15,8 @@
     ‑> Put the command in an IP packet and perform LAN communication.
     
     Command format:
-    
-    ![](images/CommandFormat.png)
+
+![](images/CommandFormat.png)
 
 ## Example:
 
