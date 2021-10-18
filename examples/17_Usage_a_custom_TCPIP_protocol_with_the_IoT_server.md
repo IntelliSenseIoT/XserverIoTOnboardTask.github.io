@@ -1,4 +1,4 @@
-# Example 17 - Usage a custom TCPIP protocol with the IoT server
+# Example 17 - Usage a custom TCP/IP protocol with the IoT server
 
 ### Prerequisites:
 
