@@ -18,6 +18,8 @@
 
 ![](images/CommandFormat.png)
 
+More details: Boiler HKM Series (HKM-750,1000,1500, 2000, 2500 G/L-F) Instruction Manual
+
 ## Example:
 
 The following example shows how to send custom TCP/IP message (or protocol) on Ethernet interface with OnboardTask
