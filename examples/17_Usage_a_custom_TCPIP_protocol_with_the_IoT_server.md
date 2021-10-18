@@ -14,7 +14,7 @@
     Remote port number: 10002
     ‑> Put the command in an IP packet and perform LAN communication.
     
-    Command format:
+### Command format:
 
 ![](images/CommandFormat.png)
 
