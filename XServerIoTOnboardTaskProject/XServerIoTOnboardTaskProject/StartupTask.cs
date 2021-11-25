@@ -40,8 +40,7 @@ namespace XServerIoTOnboardTaskProject
         {
             _Deferral = taskInstance.GetDeferral();
 
-            EventLogging.Initialize();
-            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
+            await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Start initializing...");
 
             //Todo: Write your initial code here
 
@@ -54,7 +53,7 @@ namespace XServerIoTOnboardTaskProject
             OnboardTaskHandler.ThresholdReached += OnboardTask;
             OnboardTaskHandler.Run();
 
-            EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
+            await EventLogging.AddLogMessage(MessageType.Info, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Finished initialization.");
         }
 
         /// <summary>
@@ -70,7 +69,7 @@ namespace XServerIoTOnboardTaskProject
             }
             catch (Exception ex)
             {
-                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
+                await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "OnboardTask exception error! Error: " + ex.Message);
             }
             OnboardTaskHandler.Run();  //Task continues to run
         }
@@ -110,7 +109,7 @@ namespace XServerIoTOnboardTaskProject
             }
             catch (Exception ex)
             {
-                EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Http REST server exception error! Error: " + ex.Message);
+                await EventLogging.AddLogMessage(MessageType.ExceptionError, this.GetType().Name + " - " + ServiceDisplayName + " - " + "Http REST server exception error! Error: " + ex.Message);
             }
         }
     }

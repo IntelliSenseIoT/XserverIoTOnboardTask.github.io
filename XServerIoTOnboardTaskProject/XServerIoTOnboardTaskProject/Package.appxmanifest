@@ -10,7 +10,7 @@
   <Identity
     Name="XServerIoTOnboardTaskProject-uwp"
     Publisher="CN=IntelliSense"
-    Version="10.2.22.0" />
+    Version="10.3.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="36371db1-c880-4e73-98c3-81ab25974dbf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
