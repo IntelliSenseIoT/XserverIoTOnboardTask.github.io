@@ -74,3 +74,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 [Example 14 - Upload from the onboard memory of the flow meter and Log to SQL database](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/14_Upload%20onboard%20memory%20data%20from%20flowmeter.md)
 
 [Example 15 - IoT Server Rest API connection to Web Service](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/15_IoT%20Server%20Rest%20API%20connection%20to%20Web%20Service%20.md)
+
+[Example 16 - Custom serial communication (on RS485)](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/16_Custom_Serial_communication_(RS485).md)
+
+[Example 17 - Usage a custom TCP/IP protocol with the IoT server](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/17_Usage_a_custom_TCPIP_protocol_with_the_IoT_server.md)

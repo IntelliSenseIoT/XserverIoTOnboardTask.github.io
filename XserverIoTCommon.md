@@ -128,10 +128,10 @@ Methods:
     /// Adds new values to DifferenceLog    
     public async Task<Result> DifferenceLogAddNewValues(List<EventItem> LogItems)
 
-# EventLogging methods:
+# EventLogging methods (changed from 10.3.2):
 
-    //Adds a new event into the EventLog
-    public static void AddLogMessage(MessageType MessageType, string Message)
+    //Adds a new event into the Onboard EventLog
+    public static async Task<bool> AddLogMessage(MessageType MessageType, string Message)
 
 # HttpRestServerService methods: 
 
@@ -181,3 +181,8 @@ Methods:
 
     /// Get SQL server connection info
     public static async Task<ResultSQL> GetConnectionInfo()
+
+# Serial Port methods:
+
+    /// Gets Serial Port settings  
+    public static async Task<ResultSerialPortSettings> GetSettings()
