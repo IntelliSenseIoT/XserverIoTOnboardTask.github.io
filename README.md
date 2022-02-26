@@ -35,7 +35,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 ## Required Xserver.IoT firmware
 
-    Min version: 10.2.1
+    Min version: 10.3.0
 
 ## Required UWP Capabilities
 
