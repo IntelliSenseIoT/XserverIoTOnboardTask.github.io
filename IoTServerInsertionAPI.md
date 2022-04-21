@@ -48,7 +48,9 @@ Methods:
 
 Example:
 
-Requirements: IoTServerInsertionAPI nuget
+Requirements: 
+                IoTServerInsertionAPI nuget
+                XServerIoTOnboardTaskProject from GitHub
 
     ...
     //Task Handler Period (ms)
