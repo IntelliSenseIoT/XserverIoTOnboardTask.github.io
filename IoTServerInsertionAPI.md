@@ -6,7 +6,7 @@
 
 ### Logging class
 
-Properties:
+#### Properties:
 
     /// Prefetch realtime data (seconds) Default value: 45, Range: 30-55
     public int PreReadSecond
@@ -17,7 +17,7 @@ Properties:
     /// One communication package size Default value: 100, Range: 1-10000 - Specifies the number of items during data transmission.
     public int PackageSize
 
-Methods:
+#### Methods:
 
     /// Reads Realtime values to LogPuffer
     public async Task<Result> ReadRealtimeValues(Realtime FieldDevices)
@@ -46,11 +46,11 @@ Methods:
     /// Deletes a logfile from Onboard storage   
     public async Task<Result> DeleteOnboardStorage(string StorageName)
 
-Example:
+#### Example:
 
-Requirements: 
-                IoTServerInsertionAPI nuget
-                XServerIoTOnboardTaskProject from GitHub
+#### Requirements: 
+####    IoTServerInsertionAPI nuget
+####    XServerIoTOnboardTaskProject from GitHub
 
     ...
     //Task Handler Period (ms)
