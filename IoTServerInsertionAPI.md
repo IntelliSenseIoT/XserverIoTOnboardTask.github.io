@@ -1,6 +1,8 @@
-# IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).
+# IoTServerInsertionAPI
 
-![](images/SDKOverview.png)
+IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).
+
+![](images/IoTServerInsertionAPI.png)
 
 ## Prerequisites
 
