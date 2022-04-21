@@ -56,7 +56,7 @@ Methods:
 
 #### Example:
 
-Requirements: IoTServerInsertionAPI nuget, XServerIoTOnboardTaskProject from GitHub
+Requirements: XServerIoTOnboardTaskProject from GitHub, IoTServerInsertionAPI nuget
 
 ##### Code:
 
