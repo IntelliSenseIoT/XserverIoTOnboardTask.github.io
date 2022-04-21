@@ -1,5 +1,11 @@
 # IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).
 
+## Prerequisites
+
+- XServerIoTOnboardTaskProject, minimum version: 10.3.1.1
+- Required Xserver.IoT firmware, minimum version: 10.3.0
+- Required IoT Explorer, minimum version: 10.3.19
+
 ## IoTServerInsertionAPI.LogHelpers
 
 ### Logging class
