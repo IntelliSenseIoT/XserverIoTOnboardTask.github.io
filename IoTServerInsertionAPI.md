@@ -7,8 +7,8 @@ IoTServerInsertionAPI is an add-on to the OnboardTask that makes it easier to co
 The IoTServerInsertionAPI includes:<br>
 
     -	Read real-time data to cache in memory (LogPuffer)
-    -	Save data from LogPuffer to Onboard Storage. (ff the connection is not available)
-    -	Read back data from Onboard Storage for sending (If the connection works again)
+    -	Save data from LogPuffer to Onboard Storage. (if the connection is not available)
+    -	Read back data from Onboard Storage for sending (if the connection works again)
     -	Objects and methods needed to manage data.
 <br>
 
