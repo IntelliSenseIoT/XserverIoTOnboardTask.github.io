@@ -64,7 +64,7 @@ Methods:
     /// Deletes a logfile from Onboard storage   
     public async Task<Result> DeleteOnboardStorage(string StorageName)
 
-#### Example:
+## Example:
 
 Requirements: XServerIoTOnboardTaskProject from GitHub, IoTServerInsertionAPI nuget<br>
 
@@ -227,3 +227,7 @@ In the input field below you can enter the connection parameters
         }
         PufferTaskHandler.Run();
     }
+
+## Solutions with IoTServerInsertionAPI:
+
+- [XSERVER.IOT DEXMA EM Platform Connectivity Guide](https://1drv.ms/b/s!AguHARCrYGJQghYI5IXXuLxc5kfy?e=4maIbk)
