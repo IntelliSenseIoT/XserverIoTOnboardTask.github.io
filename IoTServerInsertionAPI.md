@@ -56,7 +56,11 @@ Methods:
 
 #### Example:
 
-Requirements: XServerIoTOnboardTaskProject from GitHub, IoTServerInsertionAPI nuget
+Requirements: XServerIoTOnboardTaskProject from GitHub, IoTServerInsertionAPI nuget<br>
+
+In the input field below you can enter the connection parameters
+
+![](images/ConnectionParameter.png)
 
 ##### Code:
 
