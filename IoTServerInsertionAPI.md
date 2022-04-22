@@ -1,6 +1,16 @@
 # IoTServerInsertionAPI
 
-IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).
+IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).<br>
+
+IoTServerInsertionAPI is an add-on to the OnboardTask that makes it easier to connect to different interfaces.<br>
+
+The IoTServerInsertionAPI includes:<br>
+
+    -	Read real-time data to cache in memory (LogPuffer)
+    -	Save data from LogPuffer to Onboard Storage. (ff the connection is not available)
+    -	Read back data from Onboard Storage for sending (If the connection works again)
+    -	Objects and methods needed to manage data.
+<br>
 
 ![](images/IoTServerInsertionAPI.png)
 
