@@ -2,7 +2,7 @@
 
 IoTServerInsertionAPI helps to easily create custom interfaces to IoT Server for various services (Google Cloud, AWS, IBM Cloud, My SQL, Oracle, REST API services, etc.).<br>
 
-IoTServerInsertionAPI is an add-on to the OnboardTask that makes it easier to connect to different interfaces. [OnboardTask Architecture Overview](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/OnboardTask%20Architecture%20Overview.md)<br>
+IoTServerInsertionAPI is an add-on to the OnboardTask that makes it easier to connect to different interfaces. [More details about OnboardTask, Click here!](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/OnboardTask%20Architecture%20Overview.md)<br>
 
 The IoTServerInsertionAPI includes:<br>
 
