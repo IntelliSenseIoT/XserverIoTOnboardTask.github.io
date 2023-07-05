@@ -14,6 +14,7 @@ using Xserver.IoT.Connectivity.Interface;
 namespace XServerIoTOnboardTaskProject
 {
     /// <summary>
+    /// Xserver.IoT.100 OnboardTask
     /// Use the code below to easily write a Windows IoT Core OnboardTask to Xserver.IoT framework.
     /// Created by IntelliSense Ltd.
     /// Website: http://www.intellisense-iot.com/

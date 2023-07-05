@@ -22,7 +22,7 @@
     </PackageCertificateKeyFile>
     <AppxPackage>true</AppxPackage>
     <ContainsStartupTask>true</ContainsStartupTask>
-    <PackageCertificateThumbprint>21CE25E7AB8AD2BB887BA3B5433E96FA9887FE18</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>E56E721F5326A273D2CCEAD99A86B4A9FE681199</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
@@ -140,13 +140,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.13</Version>
+      <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>13.0.1</Version>
+      <Version>13.0.3</Version>
     </PackageReference>
     <PackageReference Include="XserverIoTCommon">
-      <Version>10.3.2</Version>
+      <Version>10.3.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
