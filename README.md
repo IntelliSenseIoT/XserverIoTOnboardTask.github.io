@@ -2,7 +2,7 @@
 
 - Xserver.IoT devices can easily transfer data from the field devices to Cloud and On-Premises (local SQL server) applications. Field devices include meters, sensors, PLCs, trip units, motor controls, inverters, heat pumps, EV charges and other devices.
 
-- Easy to integrate into your corporate system (SAP, Energy Management Software, Manufacturing Execution Systems, Building Management Software, Smart City software, Power BI, etc.) with flexible connectivity (REST API, Azure IoT HUB, SQL Server, Extendable connectivity via .NET Core SDK)
+- Easy to integrate into your corporate system (SAP, Energy Management Software, Manufacturing Execution Systems, Building Management Software, Smart City software, Power BI, etc.) with flexible connectivity (REST API, Azure IoT HUB, Google Cloud, AWS, IBM Cloud, MS SQL Server, My SQL, Oracle, Extendable connectivity via .NET Core SDK)
 
 - This capabilities allow the use of reporting, analysis, and AI software to access information from devices for data collection, trending, alarm/event management, analysis, remote control, and other functions.
 
@@ -22,6 +22,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 - [Upload your OnboardTask app to IoT Server via Azure](https://www.youtube.com/watch?v=odZtoA1Ns0Q&t=5s)
 - [XserverIoTCommon API description](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoTCommon.md)
 - [Xserver.IoT REST API interface documentation](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/XserverIoT_RestAPI_Interface_doumentation.md)
+- [IoTServerInsertionAPI description](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/IoTServerInsertionAPI.md)
 - [Nugets](https://www.nuget.org/packages/XserverIoTCommon/)
 - [Troubleshootings](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/Troubleshooting.md)
 
@@ -35,7 +36,8 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 ## Required Xserver.IoT firmware
 
-    Min version: 10.2.1
+    Required Xservet.IoT.100 device
+    Min version: 10.3.x
 
 ## Required UWP Capabilities
 
