@@ -40,6 +40,9 @@ Methods:
     /// Reads Realtime values to LogPuffer
     public async Task<Result> ReadRealtimeValues(Realtime FieldDevices)
 
+    /// Add items to LogPuffer    
+    public void AddLogPufferItems(List<LogPuffer.LogItem> NewItems)
+
     /// Returns the number of items in the LogPuffer.
     public int LogPufferCount()
 
