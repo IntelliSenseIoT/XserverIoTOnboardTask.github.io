@@ -8,7 +8,7 @@
 
 ![](images/ConnectionTechOverview2.png)
 
-# Xserver.IoT OnboardTask Overview:
+# Xserver.IoT.100 OnboardTask Overview:
 
 With the Onboard Task project can be implemented customized tasks (Industrial PC communication, Custom protocol matching, Control tasks, Remote parameter setting from cloud, Control with Artificial Intelligence, etc.).
 
@@ -34,7 +34,7 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
     Min version: Windows 10 Fall Creators Update (10.0; Build 16299) 
 
-## Required Xserver.IoT firmware
+## Required Xserver.IoT.100 firmware
 
     Required Xservet.IoT.100 device
     Min version: 10.3.x
