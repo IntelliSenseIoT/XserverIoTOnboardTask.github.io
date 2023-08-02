@@ -82,4 +82,4 @@ With the Onboard Task project can be implemented customized tasks (Industrial PC
 
 [Example 17 - Usage a custom TCP/IP protocol with the IoT server](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.github.io/blob/master/examples/17_Usage_a_custom_TCPIP_protocol_with_the_IoT_server.md)
 
-More details: [Xserver.IoT.200 OnboardTask examples](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET)
+More examples: [Xserver.IoT.200 OnboardTask examples](https://github.com/IntelliSenseIoT/XserverIoTOnboardTask.NET)
