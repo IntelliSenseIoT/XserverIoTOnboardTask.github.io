@@ -77,6 +77,11 @@ In the input field below you can enter the connection parameters
 
 ##### Code:
 
+    #region Helpers
+    ...
+    Realtime FieldDevices = new Realtime();
+    #endregion
+
     ...
     //Task Handler Period (ms)
     private const int TaskHandlerPeriod = 1000;
